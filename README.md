@@ -64,6 +64,7 @@ Applicativo che consente la registrazione e la notifica dei vari "Places" su una
 personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnologia di notifica all'avvicinarsi al pin.
 
 ### Sistemi Operativi
+
 ![](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![](https://img.shields.io/badge/Notepad++-90E59A.svg?style=for-the-badge&logo=notepad%2b%2b&logoColor=black)
 ![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
