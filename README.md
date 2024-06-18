@@ -80,7 +80,7 @@ Utilizzare i progetti a solo scopo informativo.
 
 ## **Autore**
 
-* **Vincenzo Puca** - *Mat.297713* - [LinkedIN]([https://github.com/PurpleBooth](https://www.linkedin.com/in/vincenzo-puca-054276304/))
+* **Vincenzo Puca** - *Mat.297713* - [LinkedIN](https://www.linkedin.com/in/vincenzo-puca-054276304/)
 
 ## **Licenza MIT**
 
