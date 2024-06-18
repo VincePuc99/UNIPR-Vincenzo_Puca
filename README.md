@@ -23,6 +23,8 @@ Comandi utili per lo svolgimenti di esercizi base Linux, esame svolto in ambient
 
 Esercizi ed esame svolto in linguaggio assmebly NASM.
 
+---
+
 ### Base di Dati
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -30,6 +32,8 @@ Esercizi ed esame svolto in linguaggio assmebly NASM.
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 Progetto di gestione dati su database MariaDB, programma scritto in python. Gestione del DB con DBEaver.
+
+---
 
 ### Fondamenti di Informatica
 
@@ -40,6 +44,8 @@ Progetto di gestione dati su database MariaDB, programma scritto in python. Gest
 
 Esercizi e progetti giochi svolti in python, non presenti ma svolta parte di programmazione C++
 
+---
+
 ### Fondamenti di Programmazione (C++)
 
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
@@ -47,12 +53,16 @@ Esercizi e progetti giochi svolti in python, non presenti ma svolta parte di pro
 
 Esercizi ed esame svolto in linguaggio C++.
 
+---
+
 ### Ingegneria del Software (Java)
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
 Progetti svolti con tecniche di OOP in java, presenti diagramma e JavaDOC di ogni progetto.
+
+---
 
 ### Programmazione Mobile
 
@@ -73,6 +83,8 @@ iOS - Objective C - iPhone 13 Pro - XCode
 Applicativo che consente la registrazione e la notifica dei vari "Places" su una mappa interattiva, sono stati
 personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnologia di notifica all'avvicinarsi al pin.
 
+---
+
 ### Sistemi Operativi
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -87,6 +99,8 @@ Esercizi svolti in preparazione all'esame, argomnti essenziali:
 * Fork e processi con PID e PPID
 Linguaggio C in ambiente Linux.
 
+---
+
 ### Tecnologie Internet
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -99,6 +113,8 @@ Linguaggio C in ambiente Linux.
 Sito web sviluppato con tecnologia REACT & GATSBY.
 Linguaggi web quali CSS e HTML, presente logica di encryipting dei dati utente.
 
+---
+
 ### Telematica
 
 ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
@@ -108,7 +124,7 @@ Progetto sviluppato con logica Raspberry Pi 3B, l'obiettivo era quello di svilup
 accessibile poi solo in ambiente LAN, sviluppato usando Raspi OS, consentendo a client esterni di accedere al server
 mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 
-## ATTENZIONE
+#### ATTENZIONE
 
 Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere obsoleti.
 Utilizzare i progetti a solo scopo informativo.
