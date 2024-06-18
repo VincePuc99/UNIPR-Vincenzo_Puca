@@ -5,82 +5,101 @@ Non verranno fornite le richieste ma soltanto le soluzioni scritte via codice.
 
 ## Descrizioni contenuti
 
-### Prerequisites
+### Amministrazione di Sistemi IT e Cloud
 
-What things you need to install the software and how to install them
+Comandi utili per lo svolgimenti di esercizi base Linux, esame svolto in ambiente AWS Fedora.
 
-```
-Give examples
-```
+### Architettura dei Calcolatori elettronici
 
-### Installing
+Esercizi ed esame svolto in linguaggio assmebly NASM.
 
-A step by step series of examples that tell you how to get a development env running
+### Base di Dati
 
-Say what the step will be
+Progetto di gestione dati su database MariaDB, programma scritto in python. Gestione del DB con DBEaver.
 
-```
-Give the example
-```
+### Fondamenti di Informatica
 
-And repeat
+Esercizi e progetti giochi svolti in python, non presenti ma svolta parte di programmazione C++
 
-```
-until finished
-```
+### Fondamenti di Programmazione (C++)
 
-End with an example of getting some data out of the system or using it for a little demo
+Esercizi ed esame svolto in linguaggio C++.
 
-## Running the tests
+### Ingegneria del Software (Java)
 
-Explain how to run the automated tests for this system
+Progetti svolti con tecniche di OOP in java, presenti diagramma e JavaDOC di ogni progetto.
 
-### Break down into end to end tests
+### Programmazione Mobile
 
-Explain what these tests test and why
+Progetti Applicativi per esame di programmazione mobile.
 
-```
-Give an example
-```
+Android - Java - Galaxy S8 - Android Studio
+Calcolatore di valute che alla richiesta API ad un sito esterno risponde con una documentazione JSON,
+scompattata poi all'interno del programma e mostrata all'utente tramite interfaccia. Possibilità di usare valute diverse.
 
-### And coding style tests
+iOS - Onjective C - iPhone 13 Pro - XCode
+Applicativo che consente la registrazione e la notifica dei vari "Places" su una mappa interattiva, sono stati
+personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnologia di notifica all'avvicinarsi al pin.
 
-Explain what these tests test and why
+### Sistemi Operativi
 
-```
-Give an example
-```
+Esercizi svolti in preparazione all'esame, argomnti essenziali:
+-Client-Server
+-Socket
+-Gestione Segnali
+-Fork e processi con PID e PPID
+Linguaggio C in ambiente Linux.
 
-## Deployment
+### Tecnologie Internet
 
-Add additional notes about how to deploy this on a live system
+Sito web sviluppato con tecnologia REACT & GATSBY.
+Linguaggi web quali CSS e HTML, presente logica di encryipting dei dati utente.
+
+### Telematica
+
+Progetto sviluppato con logica Raspberry Pi 3B, l'obiettivo era quello di sviluppare un server FTP in ambiente Linux
+accessibile poi solo in ambiente LAN, sviluppato usando Raspi OS, consentendo a client esterni di accedere al server
+mediante autenticazione, applicativo di test per l'accesso: FileZilla.
+
+## ATTENZIONE
+
+Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere obsoleti.
+Utilizzare i progetti a solo scopo informativo.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [VS Code](https://code.visualstudio.com/) - Programma scrittura linguaggi (Java - Python)
+* [DOSBOX](https://www.dosbox.com/) - Emulatore 8086 (Assembly NASM)
+* [XCode](https://developer.apple.com/xcode/) - Programma scrittura linguaggi - Sviluppo applicativo iOS (C++ - Objective C)
+* [Android Studio](https://developer.android.com/studio?hl=it) - Sviluppo applicativo Android (Java)
+* [REACT](https://it.legacy.reactjs.org/) - Infrastruttura scrittura Sito Web
+* [Gatsby](https://www.gatsbyjs.com/) -Infrastruttura scrittura Sito Web
+* [DBEaver](https://dbeaver.io/) - Programma di gestione DataBase
+* [MariaDB](https://mariadb.org/) - Infrastruttura gestione DataBase
+* [NotePad++](https://notepad-plus-plus.org/downloads/) - Programma scrittura linguaggio C ambiente Linux
 
-## Contributing
+## Authore
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* **Vincenzo Puca** - *Mat.297713* - [LinkedIN]([https://github.com/PurpleBooth](https://www.linkedin.com/in/vincenzo-puca-054276304/))
 
-## Versioning
+## Licenza MIT
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Copyright (c) 2024 Vincenzo Puca
 
-## Authors
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
