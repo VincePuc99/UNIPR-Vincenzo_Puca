@@ -77,10 +77,12 @@ Progetti svolti con tecniche di OOP in java, presenti diagramma e JavaDOC di ogn
 Progetti Applicativi per esame di programmazione mobile.
 
 Android - Java - Galaxy S8 - Android Studio
+
 Calcolatore di valute che alla richiesta API ad un sito esterno risponde con una documentazione JSON,
 scompattata poi all'interno del programma e mostrata all'utente tramite interfaccia. Possibilità di usare valute diverse.
 
 iOS - Objective C - iPhone 13 Pro - XCode
+
 Applicativo che consente la registrazione e la notifica dei vari "Places" su una mappa interattiva, sono stati
 personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnologia di notifica all'avvicinarsi al pin.
 
