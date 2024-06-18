@@ -1,0 +1,1146 @@
+dnf install nano
+--------------------------------------------------------------------------------
+GRUPPI UTENTI CARTELLE FILE
+--------------------------------------------------------------------------------
+useradd -g marvel -u 3002 wolverine
+useradd -g marvel -u 3003 hulk
+--------------------------------------------------------------------------------
+id $USERNAME //info user
+useradd $USERNAME
+userdel -r $USERNAME
+--------------------------------------------------------------------------------
+usermod -L hulk //blocca utente
+--------------------------------------------------------------------------------
+useradd -g disney -G marvel,users bb-8 //multi gruppo principale disney secondari marvel,user
+--------------------------------------------------------------------------------
+chage -E 2022-12-12 wolverine //scade in data
+chage -d 0 wolverine //primo accesso cambia password
+--------------------------------------------------------------------------------
+passwd user //cambia password
+--------------------------------------------------------------------------------
+sudo mkdir -p /exam/exercise2 //-p crea anche padre
+sudo groupadd collaboration //crea gruppo
+sudo chown :collaboration /exam/exercise2 //assegna il gruppo alla cartella, utente invariato
+sudo chmod 770 /exam/exercise2 //proprietario 7 gruppo 7 altri utenti 0
+sudo chmod g+s /exam/exercise2 //erediteranno il gruppo "collaboration" come gruppo proprietario (ogni file/dir)
+--------------------------------------------------------------------------------
+sudo groupadd -g 4000 exams //nuovo gruppo gid 4000
+sudo useradd -u 4100 -g exams -m -d /home/exams/exercise3 -s /bin/bash exercise3 //uid 4100 -m dir home auto -d percorso dir home -s percorso shell
+sudo passwd -e exercise3 //prossimo accesso cambia pswd
+sudo chage -E $(date -d "+1 year" +%Y-%m-%d) exercise3 				//account scade tra 1 anno es. +4 years 4 months 2 days
+sudo usermod -aG users exercise3 //aggiunge user a gruppo
+sudo chmod -R 777 /home/exams/exercise3 //tutti vedono tutto in dir
+--------------------------------------------------------------------------------
+sudo groupadd months  # Creare il gruppo
+sudo useradd -m -d /home/months/june -s /bin/bash -g months june
+chmod 700 /home/months/june //solo utente accede
+echo "umask 077" >> /home/months/june/.bashrc //solo june crea e vede i suoi file
+echo "umask 077" | sudo tee -a /etc/login.defs //per tutti gli utenti
+--------------------------------------------------------------------------------
+sudo groupadd -g 4000 exams
+sudo groupadd -g 4001 students
+sudo useradd -u 4100 -g exams -G students -m -s /bin/bash -e $(date -d "+6 months" +%Y-%m-%d) -c "Commento" exercise
+sudo passwd -e exercise
+useradd: Comando per aggiungere un nuovo utente.
+-g exams: Specifica il gruppo primario "exams".
+-G students: Aggiunge l'utente al gruppo secondario "students".
+-m: Crea automaticamente la directory home per l'utente.
+-s /bin/bash: Imposta la shell di login su /bin/bash.
+-e $(date -d "+6 months" +%Y-%m-%d): Imposta la data di scadenza dell'account a 6 mesi dalla creazione.
+-c "Commento": Specifica un commento per l'utente.
+exercise: Il nome dell'utente da creare.
+sudo chmod -R o+rwX /home/exercise //tutti gli altri leggono scrivono eseguono (solo presenti)
+echo "umask 000" >> /home/exercise/.bashrc //tutti gli altri leggono scrivono eseguono (presenti e futuri)
+--------------------------------------------------------------------------------
+sudo id userinfo &>/dev/null || sudo useradd -m userinfo //vede se user esiste se no crea (&>/dev/null) scarta gli output
+group_name=<nome_del_gruppo> && getent group "$group_name" >/dev/null || sudo groupadd "$group_name" //vede se gruppo esiste se no crea
+echo "alias myuserinfo='echo \"I’m userinfo, my working directory is: \$(pwd) - my environment variables are: \$(env)\"'" >> /home/userinfo/.bashrc
+echo "export myuserinfo" >> /home/userinfo/.bashrc (per tutti /etc/profile)
+--------------------------------------------------------------------------------
+sudo mkdir -p /usr/local/scripts //directory condivisa
+sudo mv your_script.sh /usr/local/scripts/ //muovi o crea lo script nella dir con nano
+sudo echo "PATH="/usr/local/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"">>/etc/environment //tutti
+
+echo 'export PATH="/usr/local/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"' | sudo -u specifico bash -c 'cat >> /home/myexams/.bashrc'	//solo utente specifico
+
+source /etc/environment
+source /home/tuo_utente/.bashrc
+--------------------------------------------------------------------------------
+nano create_structure.sh
+#!/bin/bash
+for X in {1..10}; do
+    dir="/exam/exercise1/exercise1_dir$X"
+    mkdir -p "$dir"
+    for Y in {1..100}; do
+        # Get the current date in the format Y-m-d
+        current_date=$(date +%Y-%m-%d)
+
+        # Create the file name using the specified format
+        file_name="file-$Y-$current_date"
+
+        # Create the file inside the directory
+        touch "$dir/$file_name"
+    done
+done
+chmod +x create_structure.sh
+./create_structure.sh
+--------------------------------------------------------------------------------
+REDIREZIONE
+> file redirects stdout to file	
+1> file redirects stdout to file
+2> file redirects stderr to file
+&> file redirects stdout and stderr to file
+> file 2>&1 redirects stdout and stderr to file
+--------------------------------------------------------------------------------
+mkdir -p /exam/exercise1/exercise_directory{A..Z}		//crea struttura
+touch /exam/exercise1/exercise_directory{A..Z}/file{1..100}_$(date +%M:%S)
+--------------------------------------------------------------------------------
+echo 'export HELLO_USER="hello student"' >> /home/student/.bashrc  //ambiente solo
+echo 'export HELLO_ALL_USERS="hello all users"' >> /etc/profile //tutti
+source /etc/profile
+source /home/student/.bashrc  
+--------------------------------------------------------------------------------
+# Crea una lista di occorrenze senza ripetizioni utilizzando shell expansion
+seq 1 1000 > /exam/exercise1/text_file
+
+# Crea un file di testo contenente i comandi
+echo "wc -l /exam/exercise1/text_file" > /exam/exercise1/command //conta righe
+echo "tail -n 100 /exam/exercise1/text_file" >> /exam/exercise1/command
+echo "head -n $(($(wc -l < /exam/exercise1/text_file) / 2)) /exam/exercise1/text_file" >> /exam/exercise1/command
+
+chmod +x /exam/exercise1/command
+/exam/exercise1/command
+--------------------------------------------------------------------------------
+sudo vim /usr/local/bin/hello
+
+#!/bin/bash
+echo "hello world"
+
+sudo chown root:root /usr/local/bin/hello
+sudo chmod 755 /usr/local/bin/hello
+
+sudo vim /etc/environment
+---Aggiungi
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+--------------------------------------------------------------------------------
+sudo nano /etc/profile	//comando custom parte una funzione
+userinfo() {
+    echo "user: $USER - working directory: $(pwd) - home_directory: $HOME"
+}
+export -f userinfo
+source /etc/profile
+--------------------------------------------------------------------------------
+Permessi solo utente può vedere suoi file
+aggiungi a collaboration
+chage = scadenza sia password -E che account
+sudo groupadd microsoft
+sudo useradd -m -G microsoft -s /bin/bash -c "Bill User" bill
+sudo chown bill:bill /home/bill
+sudo chmod 700 /home/bill
+sudo usermod -aG collaboration bill
+sudo chage -E $(date -d "+235 days" +%Y-%m-%d) -M 37 bill  // solo password 37 giorni sudo chage -M 37 bill
+sudo chage -E 2023-12-31 -M 30 alice
+--------------------------------------------------------------------------------
+REGEX
+--------------------------------------------------------------------------------
+Corrispondenza Esatta:
+Pattern: fedora
+Descrizione: Corrisponde esattamente alla parola "fedora".
+Esempio: fedora
+
+Inizio e Fine con:
+Pattern: ^Fedora$
+Descrizione: Corrisponde solo alla stringa "Fedora" che inizia e finisce.
+Esempio: Fedora
+
+Wildcard - Punto (qualsiasi carattere):
+Pattern: f.dora
+Descrizione: Corrisponde a qualsiasi carattere al posto del punto.
+Esempio: fedora, fadora, fodora, ecc.
+
+Quantificatori:
+Pattern: Fedora\d+
+Descrizione: Corrisponde a "Fedora" seguito da una o più cifre.
+Esempio: Fedora25, Fedora123, ecc.
+
+Gruppi e Alternative:
+Pattern: (Fedora|Linux) \d+
+Descrizione: Corrisponde a "Fedora" o "Linux" seguito da uno o più spazi e cifre.
+Esempio: Fedora 33, Linux 5, ecc.
+
+Caratteri di Escape:
+Pattern: Fedora \d{2}\-\w+
+Descrizione: Corrisponde a "Fedora" seguito da uno spazio, due cifre, un trattino e quindi uno o più caratteri alfanumerici.
+Esempio: Fedora 33-GNU, Fedora 22-Work, ecc.
+
+Parole Intere:
+Pattern: \b[Ff]edora\b
+Descrizione: Corrisponde alla parola "Fedora" o "fedora" come parola intera.
+Esempio: Fedora, fedora, ma non FedoraCore.
+
+Numeri Decimali:
+Pattern: \d+\.\d+
+Descrizione: Corrisponde a un numero decimale.
+Esempio: 3.14, 123.456, ecc.
+
+E-mail:
+Pattern: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+Descrizione: Corrisponde a un indirizzo e-mail.
+Esempio: user@example.com, john.doe@email.net, ecc.
+
+^(nas|cia|fbi)$ //solo quando compaiono come parole da 3 caratteri intere su una riga
+echo "^[0-9]" > /exam/exercise1/regex_file //qualsiasi riga che inizia con un numero da 0 a 9
+echo "^A.*A$" >> /exam/exercise1/regex_file //qualsiasi riga che inizia con "A" e finisce con "A"
+echo "[ne]$" >> /exam/exercise1/regex_file //qualsiasi riga che termina con "n" o "e"
+echo "[abc]+" >> /exam/exercise1/regex_file //qualsiasi riga che contiene una o più occorrenze di "a", "b" o "c"
+.*(?:ab|ac|af|bb|bc|bf).* //coppie contenute in
+
+grep -E -f /exam/exercise1/regex_file /exam/exercise1/text_file //per testing
+
+find /usr -type f -o -type d | grep -E '^.*(ab.*|ac.*|af.*|bb.*|bc.*|bf.*)$' > /exam/exercise1/regex.txt //trova dir e file che iniziano e finiscono in
+
+find /usr -type f -o -type d | grep -E '.*ab.*|.*ac.*|.*af.*|.*bb.*|.*bc.*|.*bf.*' > /exam/exercise1/regex.txt //contengono il pattern
+
+mkdir -p /exam/exercise2/
+find /var 2>/dev/null | grep a[a-z]t > /exam/exercise2/aXt.txt
+--------------------------------------------------------------------------------
+FIREWALL
+--------------------------------------------------------------------------------
+firewall-cmd --permanent --zone=work --add-rich-rule='rule service name="http" log prefix="Exercise9 " level="notice" limit value="5/s" accept'
+firewall-cmd --reload
+--permanent: Questa opzione rende le modifiche permanenti, in modo che sopravvivano anche dopo un riavvio del sistema.
+--zone=work: Questo indica che la regola verrà applicata alla zona chiamata "work" nel firewall.
+--add-rich-rule: Aggiunge una regola personalizzata usando la sintassi "rich rule".
+'rule service name="http" log prefix="Exercise9 " level="notice" limit value="5/s" accept': Questa è la regola stessa. 
+In questo caso, stai specificando di loggare le connessioni HTTP con il prefisso "Exercise9 " e con un livello di log "notice". 
+Inoltre, stai limitando il log a un massimo di 5 voci al secondo e accettando il traffico.
+--------------------------------------------------------------------------------
+SCRIPT
+--------------------------------------------------------------------------------
+echo "l(100)/l(10)" | bc -l //logaritmo di base 10 di 100
+echo "l(100)" | bc -l //logaritmo di base e di 100
+--------------------------------------------------------------------------------
+FILE=$1
+ACTION=$2
+//file non esite
+if [ ! -f $1 ] 
+then 
+    echo "file not found"
+    exit 1 
+fi 
+//spazzola file
+for ENTRY in $(cat $FILE); do
+    # Extract first, last, and tier fields
+    FIRSTNAME=$(echo $ENTRY | cut -d: -f1)
+    LASTNAME=$(echo $ENTRY | cut -d: -f2)
+    USERID=$(echo $ENTRY | cut -d: -f3)
+    # Make account name
+    FIRSTINITIAL=$(echo $FIRSTNAME | cut -c 1 | tr 'A-Z' 'a-z')
+    LOWERLASTNAME=$(echo $LASTNAME | tr 'A-Z' 'a-z')
+done
+
+ACCTNAME=$FIRSTINITIAL$LOWERLASTNAME
+    if [ $ACTION == "add" ]
+    then
+        id $ACCTNAME 2> /dev/null 1 > /dev/null
+        if [ $? -ne 0 ]
+        then
+            useradd -u $USERID $ACCTNAME 2>/dev/null
+        fi
+        if [ $? -eq 0 ]
+        then
+            echo "user $ACCTNAME added"
+        fi
+    elif [ $ACTION == "remove" ]
+    then
+        id $ACCTNAME 2> /dev/null 1 > /dev/null
+        if [ $? -eq 0 ]
+        then
+            userdel -r $ACCTNAME 2>/dev/null
+        fi
+        if [ $? -eq 0 ]
+        then
+            echo "user $ACCTNAME deleted"
+        fi
+    else
+        echo echo "usage: createuser.sh <filename> <add/remove>"
+        exit 1
+    fi
+done
+--------------------------------------------------------------------------------
+nano /exam/exercise5/prime_numbers.sh
+---------
+#!/bin/bash
+
+if [ "$#" -lt 2 ]; then
+    echo "Errore: Devono essere passati almeno due parametri in ingresso."
+    exit 100
+fi
+
+for number in "$@"; do
+    if ! [[ "$number" =~ ^[0-9]+$ ]]; then
+        echo "$number non è un numero."
+    else
+        is_prime=true
+        for ((i = 2; i <= number / 2; i++)); do
+            if [ $((number % i)) -eq 0 ]; then
+                is_prime=false
+                break
+            fi
+        done
+
+        if [ "$number" -eq 1 ]; then
+            is_prime=false
+        fi
+
+        if $is_prime; then
+            echo "$number è un numero primo."
+        else
+            echo "$number non è un numero primo."
+        fi
+    fi
+done
+---------
+chmod +x /exam/exercise5/prime_numbers.sh
+/exam/exercise5/prime_numbers.sh 7 15 abc 23
+--------------------------------------------------------------------------------
+# Verifica che sia stata fornita almeno una lista di numeri come argomento
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <list_of_numbers>"
+    exit 1
+fi
+
+# Leggi i numeri dalla lista degli argomenti passati allo script
+numbers=("$@")
+
+# Stampa i numeri inseriti
+echo "Numbers entered: ${numbers[@]}"
+
+# Calcola la somma dei numeri
+sum=0
+for num in "${numbers[@]}"; do
+    sum=$((sum + num))
+done
+echo "Sum: $sum"
+
+# Calcola la media dei numeri
+average=$((sum / ${#numbers[@]}))
+echo "Average: $average"
+--------------------------------------------------------------------------------
+# Verifica che sia stata fornita almeno una lista di numeri come argomento
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <list_of_numbers>"
+    exit 1
+fi
+
+# Funzione per verificare se una stringa è un numero
+is_number() {
+    # Utilizza il comando "expr" per verificare se la stringa è un numero
+    expr "$1" + 0 > /dev/null 2>&1
+    return $?
+}
+
+# Leggi i numeri dalla lista degli argomenti passati allo script
+numbers=("$@")
+
+# Verifica che tutti gli elementi siano numeri
+for num in "${numbers[@]}"; do
+    if ! is_number "$num"; then
+        echo "Error: $num is not a valid number."
+        exit 1
+    fi
+done
+--------------------------------------------------------------------------------
+#!/bin/bash
+
+# Verifica che sia stata fornita almeno una lista di numeri come argomento
+if [ $# -lt 2 ]; then
+    echo "Usage: $0 <list_of_numbers>"
+    exit 1
+fi
+
+# Funzione per verificare se una stringa è un numero
+is_number() {
+    # Utilizza il comando "expr" per verificare se la stringa è un numero
+    expr "$1" + 0 > /dev/null 2>&1
+    return $?
+}
+
+# Leggi i numeri dalla lista degli argomenti passati allo script
+numbers=("$@")
+
+# Verifica che tutti gli elementi siano numeri
+for num in "${numbers[@]}"; do
+    if ! is_number "$num"; then
+        echo "Error: $num is not a valid number."
+        exit 1
+    fi
+done
+
+sumpari=0
+sumdisp=0
+
+for numw in "${numbers[@]}"; do
+    if [ $((numw % 2)) -eq 0 ]; then
+         sumpari=$((sumpari + numw))
+    else
+         sumdisp=$((sumdisp + numw))
+    fi
+done
+
+echo "somma pari = ${sumpari}"
+echo "somma dispari = ${sumdisp}"
+--------------------------------------------------------------------------------
+#!bin/bash
+
+    #cd /
+    #sudo mkdir Document
+    #cd Document
+    #sudo mkdir Root
+    #sudo chmod -R -rwxrwxrwx /Document/
+       
+    #chmod +x myscript.sh
+
+print_error(){
+    echo "Command not found" >&1
+    exit $1
+}
+
+if [ "$#" -eq 2 ]; then
+    echo "USAGE: configure_httpd.sh <install|uninstall|restart>"
+    echo "USAGE: configure_httpd.sh <configure> <port> <documentroot>"
+    exit 5
+fi
+
+command=$1
+
+case "$command" in
+  "install")
+       $(sudo yum update)
+       $(sudo dnf install httpd)
+       echo "httpd service installed"
+    ;;
+  "uninstall")
+       $(sudo dnf erase httpd)
+       echo "httpd service removed"
+    ;;
+  "restart")
+    $(sudo systemctl restart httpd)
+    echo"httpd service restarted"
+    ;;
+  "configure")
+       if ! [ "$#" -eq 3 ]; then
+       echo "USAGE: configure_httpd.sh configure <port> <documentroot>"
+       exit 6
+       fi
+       
+       PORT=$2
+       DOCUMENTROOT=$3   
+       
+       #/etc/httpd/conf/httpd.conf --- posizione httpd conf
+       
+       export PORT
+       export DOCUMENTROOT
+       
+       envsubst < /exam/exercise4/httpd_template.conf > /etc/httpd/conf/httpd.conf
+
+        # Crea il contenuto del file index.html
+        html_content="<!DOCTYPE html>
+        <html>
+        <head>
+            <title>Hello Exam</title>
+        </head>
+        <body>
+            <h1>hello exam</h1>
+        </body>
+        </html>"
+
+        # Crea il file index.html sotto DocumentRoot
+        echo "$html_content" | sudo tee "$DOCUMENTROOT/index.html" > /dev/null
+
+        echo "Httpd service configured"
+
+    ;;
+  *)
+    print_error 10
+    ;;
+esac
+--------------------------------------------------------------------------------
+#!/bin/bash
+
+print_error() {
+  echo "Usage: exercise5index.sh \"<string>\" <command>" >&2
+  exit 1
+}
+
+if [ $# -lt 2 ]; then
+  print_error
+fi
+
+input_string="$1"
+command="$2"
+output_file="/exam/exercise5/index.html"
+
+case "$command" in
+  "append")
+    echo "$input_string" >> "$output_file"
+    ;;
+  "new")
+    echo "$input_string" > "$output_file"
+    ;;
+  *)
+    print_error
+    ;;
+esac
+
+chmod +x exercise5index.sh
+./exercise5index.sh
+--------------------------------------------------------------------------------
+if [ $# -eq "0" ] || [ $# -eq "1" ]
+then
+fi
+--------------------------------------------------------------------------------
+fact=0	//calcolo fattoriale
+number=1
+
+for((i=2;i<=number;i++))
+{
+  fact=$((fact * i))
+}
+
+echo $fact
+--------------------------------------------------------------------------------
+#!/bin/bash
+
+print_error() {
+  echo "Usage: exercise5index.sh \"<string>\" <command>" >&2
+  exit 1
+}
+
+if [ $# -lt 2 ]; then
+  print_error
+fi
+
+input_string="$1"
+command="$2"
+output_file="/exam/exercise5/index.html"
+
+case "$command" in
+  "append")
+    echo "$input_string" >> "$output_file"
+    ;;
+  "new")
+    echo "$input_string" > "$output_file"
+    ;;
+  *)
+    print_error
+    ;;
+esac
+
+chmod +x exercise5index.sh
+./exercise5index.sh
+--------------------------------------------------------------------------------
+#!/bin/bash
+
+# Funzione per stampare il messaggio di errore e uscire con il codice di uscita
+print_error() {
+  echo "$1" >&2
+  exit $2
+}
+
+# Verifica se il numero di parametri è corretto
+if [ $# -eq 0 ]; then
+  print_error "no parameters passed - Usage: checkusername.sh <username list>" 10
+elif [ $# -gt 5 ]; then
+  print_error "too many parameters passed (max 5) - Usage: checkusername.sh <username list>" 20
+fi
+
+# Loop attraverso gli username passati come parametri
+for username in "$@"; do
+  # Verifica se lo username esiste
+  if id "$username" &>/dev/null; then
+    echo "user $username found:"
+    id "$username"
+    chage -l "$username"
+    grep "^$username:" /etc/passwd
+  else
+    echo "user $username not found"
+  fi
+done
+---------------
+varexit=9
+exit "$varexit"
+--------------------------------------------------------------------------------
+HTTPD APACHE
+--------------------------------------------------------------------------------
+sudo dnf install httpd //installa httpd
+sudo systemctl enable apache2 //boot
+
+sudo nano /etc/apache2/ports.conf
+Listen 8080 //riga già esistente
+
+sudo nano /etc/apache2/sites-available/000-default.conf
+<VirtualHost *:8080> //cambiare riga già esistente
+
+sudo systemctl restart apache2
+--------------------------------------------------------------------------------
+sudo dnf install httpd //installa httpd
+sudo nano /etc/apache2/sites-available/exercise4.conf
+---------
+<VirtualHost *:80>
+    ServerName www.exercise4.myexam.com
+    DocumentRoot /var/www/exercise4
+
+    <Directory /var/www/exercise4>
+        Require all granted
+    </Directory>
+</VirtualHost>
+---------
+sudo mkdir /var/www/exercise4
+cd /var/www/exercise4
+echo "Hello class!" > index.html
+--------- PHP (Meglio)
+<?php
+    $httpd_user = shell_exec('whoami');
+    echo "<H1>Hello from $httpd_user user</H1>";
+?>
+---------
+sudo ln -s /usr/share/doc/apache2-doc/manual/ /var/www/exercise4/manual
+# Abilita il sito appena creato Riavvia Apache per applicare le modifiche
+sudo a2ensite exercise4.conf
+sudo systemctl restart apache2
+--------------------------------------------------------------------------------
+sudo dnf install httpd
+sudo nano /etc/httpd/conf.d/exercise4.myexam.com.conf
+<VirtualHost *:80>
+    ServerName www.exercise4.myexam.com
+    DocumentRoot /var/www/html
+
+    <Directory /var/www/html>
+        Require all granted
+    </Directory>
+
+    Alias /manual "/usr/share/httpd/manual"
+</VirtualHost>
+sudo mkdir -p /var/www/html
+echo "Hello class!" | sudo tee /var/www/html/index.html
+sudo nano /etc/hosts
+<indirizzo_ip_privato> www.exercise4.myexam.com //associ ip e dominiio
+sudo systemctl start httpd
+sudo systemctl enable httpd
+--------------------------------------------------------------------------------
+sudo dnf install httpd //installa httpd
+sudo systemctl enable httpd //avvio auto boot
+
+sudo nanp /etc/httpd/conf/httpd.conf
+in file cambi il listen per sola porta 
+Listen 8088
+CTRL O CTRL X
+
+sudo firewall-cmd --add-port=8088/tcp --permanent
+sudo firewall-cmd --reload
+
+sudo nano /etc/httpd/conf/httpd.conf
+in file cambi home dir
+<Directory "/exam/exercise4">
+CTRL O CTRL X
+
+echo "Hello Exam!" | sudo tee /exam/exercise4/index.html
+sudo systemctl start httpd
+--------------------------------------------------------------------------------
+sudo dnf install httpd //installa httpd
+Avvio automatico di HTTPD al boot:
+sudo systemctl enable httpd
+sudo systemctl start httpd
+
+Apri il file di configurazione principale di Apache per modificare le impostazioni:
+sudo nano /etc/httpd/conf/httpd.conf
+
+Cambia Listen 80 in Listen 8080 per far ascoltare Apache sulla porta 8080.
+
+Aggiungi o modifica DocumentRoot per puntare alla directory desiderata, ad esempio:
+DocumentRoot /exam/exercise5/
+
+Se hai un firewall attivo (come iptables o firewalld), devi consentire il traffico sulla porta 8080. Ad esempio, se stai usando iptables:
+sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+----------------------------------------------------------
+Firewalld:
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+--------------------------------------------------------------------------------
+DOCKER
+--------------------------------------------------------------------------------
+DockeFile
+FROM: Questo comando specifica l'immagine di base da cui verrà costruita l'immagine del nuovo container. Ad esempio: FROM ubuntu:latest.
+RUN: Il comando RUN viene utilizzato per eseguire comandi all'interno del container durante la fase di costruzione. Ad esempio: RUN apt-get update && apt-get install -y apache2.
+COPY: Questo comando copia file o intere directory dalla directory di contesto (dove si trova il Dockerfile) all'interno dell'immagine. Ad esempio: COPY app /usr/src/app.
+ADD: Simile a COPY, ma può anche gestire URL e fare alcune altre operazioni. Ad esempio: ADD http://example.com/file.txt /app/file.txt.
+WORKDIR: Imposta la directory di lavoro all'interno dell'immagine in cui verranno eseguiti i comandi successivi. Ad esempio: WORKDIR /usr/src/app.
+ENV: Imposta variabili d'ambiente all'interno dell'immagine. Ad esempio: ENV PORT=8080.
+EXPOSE: Specifica le porte su cui il container ascolterà in fase di esecuzione. Ad esempio: EXPOSE 80.
+CMD: Fornisce un comando di default da eseguire quando il container viene avviato. Ad esempio: CMD ["npm", "start"].
+ENTRYPOINT: Definisce un comando da eseguire quando il container viene avviato, ma può essere sovrascritto da comandi specifici passati durante l'avvio. Ad esempio: ENTRYPOINT ["java", "-jar", "app.jar"].
+VOLUME: Specifica le directory all'interno del container che devono essere montate come volumi, consentendo la condivisione di dati tra il container e l'host.
+-compose
+Il file `docker-compose.yml` può includere diverse sezioni, ciascuna con un ruolo specifico nell'organizzazione e nella definizione dei servizi e delle risorse per l'applicazione multi-container. Ecco una panoramica delle sezioni disponibili:
+1. **`version`**: Specifica la versione di Docker Compose da utilizzare. Attualmente, le versioni più comuni sono `version: '3'` e superiori.
+2. **`services`**: Questa sezione definisce i servizi all'interno dell'applicazione. Ogni servizio rappresenta un container separato.
+3. **`networks`**: Opzionale. Qui puoi definire le reti personalizzate se vuoi separare i servizi in reti specifiche. Questo può essere utile per il controllo degli accessi e per isolare i servizi.
+4. **`volumes`**: Opzionale. Qui puoi definire i volumi personalizzati per la persistenza dei dati tra i container. I volumi sono utili per memorizzare dati che devono persistere anche dopo la rimozione dei container.
+5. **`configs`**: Opzionale. Puoi definire le configurazioni per i servizi, che possono essere utili per gestire file di configurazione dinamici.
+6. **`secrets`**: Opzionale. Qui puoi definire i segreti, ad esempio chiavi API o password, e collegarli ai tuoi servizi in modo sicuro.
+7. **`environment`**: Opzionale. Qui puoi definire variabili d'ambiente da passare ai container. Queste variabili possono influenzare il comportamento dell'applicazione.
+8. **`build`**: Opzionale. Puoi specificare un contesto e una serie di opzioni per la costruzione delle immagini dei servizi.
+9. **`image`**: Opzionale. Specifica l'immagine Docker da utilizzare per un servizio. Puoi utilizzare immagini preesistenti o immagini personalizzate costruite precedentemente.
+10. **`ports`**: Opzionale. Specifica la mappatura delle porte tra l'host e il container. Consente di esporre le porte dei servizi all'esterno.
+11. **`volumes`**: Opzionale. Specifica la mappatura dei volumi tra l'host e il container. Consente di condividere dati tra il filesystem host e i container.
+12. **`command`**: Opzionale. Specifica un comando da eseguire all'interno del container al momento dell'avvio.
+13. **`entrypoint`**: Opzionale. Specifica il comando di ingresso predefinito da eseguire quando il container viene avviato.
+
+version: '3'
+services:
+  my_app:
+    image: my_image:latest
+    build:
+      context: ./my_app
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - ENV_VAR=value
+    networks:
+      - my_network
+    configs:
+      - source: my_config
+        target: /app/config
+    secrets:
+      - my_secret
+
+networks:
+  my_network:
+
+volumes:
+  data:
+
+configs:
+  my_config:
+    file: ./config.txt
+
+secrets:
+  my_secret:
+    file: ./secret.txt
+
+my_app è il nome del servizio.
+image specifica l'immagine da utilizzare.
+build definisce le opzioni per la costruzione dell'immagine.
+ports mappa la porta 80 all'interno del container sulla porta 8080 dell'host.
+volumes crea un volume personalizzato per condividere dati tra host e container.
+environment imposta una variabile d'ambiente nel container.
+networks collega il servizio a una rete personalizzata.
+configs definisce una configurazione personalizzata da condividere con il container.
+secrets specifica un segreto da condividere con il container.
+Le sezioni come networks, volumes, configs e secrets vengono definite globalmente, fuori dalla sezione services, ma possono essere utilizzate dai servizi come risorse condivise. Tieni presente che questo è solo un esempio illustrativo e che le configurazioni effettive possono variare in base alle tue esigenze specifiche.
+--------------------------------------------------------------------------------
+mkdir -p /exam/exercise6
+# Usa un'immagine di base
+FROM ubuntu:latest
+# Aggiorna il sistema e installa il software necessario
+RUN apt-get update && \
+    apt-get install -y <software_a_piacere>
+# Copia lo script di entrypoint
+COPY dockerexam.sh /dockerexam.sh
+# Imposta l'entrypoint script come eseguibile
+RUN chmod +x /dockerexam.sh
+# Esegui lo script di entrypoint
+CMD ["/dockerexam.sh"]
+
+nano /exam/exercise6/dockerexam.sh
+#!/bin/bash
+
+# Avvia un processo a piacere (es. sleep) per mantenere il container in esecuzione
+<comando_a_piacere> &
+# L'ampersand (&) fa sì che il comando venga eseguito in background
+sleep infinity &
+# Attendi il segnale di terminazione
+trap "exit 0" SIGTERM
+# Attendi indefinitamente (puoi sostituire con ulteriori comandi o cicli)
+while true; do
+    sleep 1
+done
+
+docker build -t exam/exercise6:1.0 /exam/exercise6
+docker run -d --name exercise6_container exam/exercise6:1.0
+--------------------------------------------------------------------------------
+mkdir -p /exam/exercise6/httpd /exam/exercise6/content_management /exam/exercise6/content
+# Crea il file httpd/Dockerfile
+nano /exam/exercise6/httpd/Dockerfile
+# Crea il file httpd/entrypoint.sh
+nano /exam/exercise6/httpd/entrypoint.sh
+# Crea il file content_management/Dockerfile
+nano /exam/exercise6/content_management/Dockerfile
+# Crea il file content_management/entrypoint.sh
+nano /exam/exercise6/content_management/entrypoint.sh
+# Crea il file content/index.html
+nano /exam/exercise6/content/index.html
+# Crea il file docker-compose.yml
+nano /exam/exercise6/docker-compose.yml
+
+httpd/dpckerfile da aprire con nan
+FROM fedora:latest
+# Installa il server Apache
+RUN dnf install -y httpd
+# Copia il file entrypoint.sh nello spazio di lavoro
+COPY entrypoint.sh /entrypoint.sh
+# Imposta i permessi di esecuzione per lo script
+RUN chmod +x /entrypoint.sh
+# Esponi la porta 80
+EXPOSE 80
+# Esegui lo script entrypoint.sh quando il container parte
+CMD ["/entrypoint.sh"]
+
+httpd/entrypoint da aprire con nano
+#!/bin/bash
+# Avvia il servizio Apache
+httpd -DFOREGROUND
+contenuto content_management
+FROM fedora:latest
+# Copia il file entrypoint.sh nello spazio di lavoro
+COPY entrypoint.sh /entrypoint.sh
+# Imposta i permessi di esecuzione per lo script
+RUN chmod +x /entrypoint.sh
+# Esegui lo script entrypoint.sh quando il container parte ogni due minuti
+CMD ["watch", "-n", "120", "/entrypoint.sh"]
+
+contenuto script
+#!/bin/bash
+# Ottieni il valore della variabile TIME_FORMAT (default MM-YYYY)
+TIME_FORMAT=${TIME_FORMAT:-MM-YYYY}
+# Formatta la data in base a TIME_FORMAT
+if [ "$TIME_FORMAT" = "MM-DD-YYYY" ]; then
+    NEW_CONTENT=$(date "+%A %d-%B, %Y")
+else
+    NEW_CONTENT=$(date "+%m-%Y")
+fi
+# Scrivi il nuovo contenuto nella index.html
+echo "$NEW_CONTENT" > /content/index.html
+
+docker-compose (nano)
+
+version: '3'
+services:
+  httpd:
+    build:
+      context: ./httpd
+    ports:
+      - "80:80"
+    volumes:
+      - ./content:/var/www/html
+
+  content_management:
+    build:
+      context: ./content_management
+    environment:
+      - TIME_FORMAT=MM-YYYY
+    volumes:
+      - ./content:/content
+    environment:
+      MY_VARIABLE		//prende il valore dalla var d'ambiente
+
+docker-compose up --build //build e run (devi essere nella cartella sopra i servizi es. exam/exercise6)
+docker run -e MY_VARIABLE=myvalue myappimage 
+--------------------------------------------------------------------------------
+nano /exam/exercise7/Dockerfile
+# Usa un'immagine di base con un web server già installato e configurato (es. nginx)
+FROM nginx:latest
+# Copia il file index.html dalla directory host nella directory del documento radice del server
+COPY ./exercise5/index.html /usr/share/nginx/html/
+----------------------------------------
+nano /exam/exercise7/docker-compose.yml
+version: '3'
+services:
+  webserver:
+    build: .
+    ports:
+      - "8080:80"  # Mappa la porta 8080 del tuo sistema all'interno della porta 80 del contenitore
+    volumes:
+      - ./exercise5:/usr/share/nginx/html:ro  # Monta la directory host exercise5 sulla directory del documento radice del server nel contenitore
+
+cd /exam/exercise7  # Sposta nella directory dove si trovano i file Dockerfile e docker-compose.yml
+docker-compose up --build		docker compose up -d <- Build con questo
+--------------------------------------------------------------------------------
+nano /exam/exercise7/Dockerfile
+---------
+FROM cavatortaluca/exam:centos8
+COPY hello.sh /hello.sh
+RUN chmod +x /hello.sh
+CMD ["/hello.sh"]
+---------
+nano /exam/exercise7/hello.sh
+---------
+#!/bin/bash
+echo "hello \$EXAM"
+---------
+nano /exam/exercise7/docker-compose.yml
+---------
+version: '3'
+services:
+  myapp:
+    build: .
+    environment:
+      - EXAM=mycustommessage
+---------
+chmod +x /exam/exercise7/hello.sh
+
+cd /exam/exercise7/
+docker-compose up --build
+--------------------------------------------------------------------------------
+FROM alpine:latest
+COPY hello_student.sh /hello_student.sh
+RUN chmod +x /hello_student.sh
+CMD ["/hello_student.sh"]
+
+#!/bin/bash
+
+for i in {1..3}; do
+    echo "Hello Student"
+    sleep 2
+done
+
+docker build -t hello-student-image
+docker run --name hello-student-container hello-student-image //nome custom hello-student-container
+--------------------------------------------------------------------------------
+systemctl start docker			//start demone
+docker build --tag hello:1.0 .		//hello:1.0 = nome
+docker run --rm hello:1.0
+--------------------------------------------------------------------------------
+DOMANDE
+--------------------------------------------------------------------------------
+Differenza tra metodo dichiarativo e imperativo applicato ad un esempio in Kubernetes:
+Immagina che tu voglia creare un deployment con tre repliche. Nel metodo dichiarativo, 
+descriveresti lo stato desiderato del deployment, 
+specificando il numero di repliche nel file di configurazione.
+Nel metodo imperativo, invece, 
+invieresti un comando diretto a Kubernetes per creare il deployment con il numero specifico di repliche.
+
+In sintesi, il metodo dichiarativo si concentra sulla definizione dello stato desiderato,
+mentre il metodo imperativo si concentra sull'invio di comandi diretti per eseguire azioni specifiche. 
+Entrambi i metodi hanno i loro vantaggi e svantaggi e possono essere scelti in base alle esigenze 
+specifiche dell'implementazione.
+--------------------------------------------------------------------------------
+"Service as a Service" (SaaS) è un modello di distribuzione del software in cui un'applicazione 
+software specifica viene offerta come servizio agli utenti attraverso Internet. 
+In pratica, gli utenti accedono all'applicazione tramite un browser web, senza dover gestire l'installazione, 
+la manutenzione o l'infrastruttura sottostante dell'applicazione stessa. 
+Un esempio comune di SaaS è Google Workspace (precedentemente noto come G Suite), 
+in cui le applicazioni come Gmail, Google Drive e Google Docs vengono fornite come servizio online.
+
+Kubernetes, d'altra parte, non può essere considerato un "Service as a Service" (SaaS) 
+in quanto non fornisce direttamente un'applicazione specifica agli utenti finali. 
+Kubernetes è piuttosto un sistema open-source per l'automazione del deployment, 
+della scalabilità e della gestione delle applicazioni containerizzate. 
+Gestisce il deployment e la gestione di contenitori, consentendo agli sviluppatori di creare, 
+distribuire e gestire le proprie applicazioni in modo efficiente e affidabile. 
+Kubernetes fornisce funzionalità come orchestrazione, bilanciamento del carico, 
+rollbacks e scalabilità automatica, ma è principalmente un'infrastruttura tecnica 
+su cui vengono eseguite applicazioni, non un servizio finale offerto agli utenti.
+
+Per quanto riguarda l'oggetto Kubernetes chiamato "Service", si tratta di un'astrazione 
+che definisce un insieme stabile di indirizzi IP e porte che consentono di esporre 
+un'applicazione in esecuzione all'interno di un set di pod all'interno di un cluster Kubernetes. 
+In altre parole, un "Service" consente ai pod all'interno di un'applicazione 
+di comunicare tra di loro o con altre applicazioni, sia all'interno che all'esterno del cluster, 
+attraverso un nome di dominio DNS stabile anziché dipendere da indirizzi IP che possono variare. 
+Un "Service" può essere del tipo "ClusterIP" (accessibile solo dall'interno del cluster), 
+"NodePort" (esposto su un indirizzo IP di ciascun nodo) o 
+"LoadBalancer" (utilizza un servizio di bilanciamento del carico cloud esterno).
+--------------------------------------------------------------------------------
+"Platform as a Service" (PaaS) è un altro modello di distribuzione del software, simile a SaaS,
+ ma in questo caso il focus è sulla fornitura di un'intera piattaforma di sviluppo e distribuzione, 
+anziché solo un'applicazione specifica. In un ambiente PaaS, gli sviluppatori possono creare, 
+testare e distribuire le proprie applicazioni senza preoccuparsi della gestione dell'infrastruttura sottostante. 
+La piattaforma PaaS offre strumenti e servizi per lo sviluppo, il deployment, 
+la scalabilità e la gestione delle applicazioni.
+
+Kubernetes può essere considerato un servizio di tipo "Platform as a Service" (PaaS) 
+in quanto fornisce un'infrastruttura completa per la gestione delle applicazioni containerizzate. 
+Kubernetes non si limita solo alla gestione dei container, ma offre anche servizi per l'orchestrazione, 
+il bilanciamento del carico, la scalabilità automatica, la gestione delle risorse e altro ancora.
+ Gli sviluppatori possono concentrarsi sulla definizione dello stato desiderato dell'ambiente e
+ Kubernetes si occuperà di rendere effettivo questo stato, gestendo i dettagli complessi 
+dell'implementazione e della gestione dell'applicazione.
+
+Rispondendo alla tua seconda domanda, la differenza principale tra il metodo "dichiarativo" e "imperativo"
+riguarda l'approccio utilizzato per specificare l'intento dell'azione da eseguire.
+
+Metodo Dichiarativo: In un approccio dichiarativo, si definisce lo stato desiderato del sistema 
+senza specificare come raggiungerlo. Ad esempio, con Kubernetes, si definisce quale dovrebbe 
+essere il numero di repliche di un'applicazione, quali risorse dovrebbero essere allocate e altre configurazioni.
+ Kubernetes si occuperà quindi di adattare lo stato attuale del sistema per corrispondere a questa descrizione.
+
+Metodo Imperativo: In un approccio imperativo, si specifica esplicitamente come eseguire un'azione. 
+Ad esempio, si potrebbe impartire un comando diretto a Kubernetes per avviare un certo numero 
+di repliche di un'applicazione senza considerare lo stato attuale del sistema.
+
+Le principali differenze tra i due approcci includono:
+
+Complessità: L'approccio dichiarativo tende a essere più semplice e astratto, 
+poiché si concentra su cosa si desidera ottenere piuttosto che su come farlo. 
+L'approccio imperativo può essere più dettagliato e richiedere una conoscenza più approfondita delle operazioni sottostanti.
+
+Gestione dello stato: L'approccio dichiarativo si basa sulla conciliazione dello stato attuale 
+con quello desiderato, garantendo che il sistema si avvicini gradualmente allo stato desiderato. 
+L'approccio imperativo potrebbe comportare cambiamenti immediati nello stato del sistema, il che potrebbe portare a situazioni impreviste o conflitti.
+
+Automazione: L'approccio dichiarativo si presta meglio all'automazione, 
+in quanto il sistema può prendersi cura di gran parte del lavoro di implementazione e gestione. 
+L'approccio imperativo richiede spesso una maggiore interazione umana.
+
+In generale, l'approccio dichiarativo è preferito nell'ambito di Kubernetes e della gestione 
+delle risorse cloud perché promuove la prevedibilità, l'automazione e la scalabilità.
+--------------------------------------------------------------------------------
+Docker ha rivoluzionato l'approccio alla gestione delle applicazioni introducendo 
+il concetto di containerizzazione. Prima dell'arrivo di Docker, le applicazioni
+ venivano spesso eseguite direttamente sul sistema operativo ospite, 
+il che poteva causare conflitti tra le dipendenze delle applicazioni 
+e portare a problemi di isolamento e scalabilità. Docker ha introdotto la concetto di "container", 
+che impacchetta l'applicazione e tutte le sue dipendenze (librerie, runtime, file di configurazione) 
+in un ambiente isolato e portatile.
+
+Ecco come Docker cambia l'approccio alla gestione delle applicazioni rispetto 
+a un sistema operativo tradizionale:
+
+Isolamento: I container offrono un elevato livello di isolamento tra applicazioni 
+diverse e dal sistema operativo ospite. Ogni container ha il proprio filesystem 
+isolato e le sue risorse, che consentono alle applicazioni di coesistere senza interferenze.
+
+Portabilità: I container Docker sono altamente portabili. Puoi creare un container 
+in un ambiente e quindi eseguirlo in un altro senza dover preoccuparti delle differenze 
+tra i sistemi operativi o le configurazioni. Questo semplifica la distribuzione delle 
+applicazioni sia nello sviluppo che nella produzione.
+
+Riproducibilità: Grazie alla definizione basata su file (Dockerfile) che elenca tutte
+ le dipendenze e le istruzioni necessarie per costruire un container, è possibile creare
+ ambienti replicabili e riproducibili per lo sviluppo e il testing.
+
+Scalabilità: I container possono essere facilmente scalati su diverse macchine o 
+nodi senza dover configurare manualmente le dipendenze o le librerie per ciascuna istanza dell'applicazione.
+
+Gestione semplificata: Docker semplifica la gestione delle applicazioni consentendo di creare, 
+distribuire, aggiornare e sostituire container con facilità, attraverso l'automazione e lo standardizzazione dei processi.
+
+Passando alla tua seconda domanda, un "Pod" in Kubernetes è la più piccola unità 
+di distribuzione. Contiene uno o più container che condividono risorse di rete e di storage, 
+e rappresenta un'istanza di un processo in esecuzione nel cluster. In altre parole, 
+un pod è un'unità logica che può ospitare uno o più container.
+
+La differenza principale tra un "Pod" e un "Container" è che il primo è un'astrazione 
+di livello superiore che può contenere uno o più container, mentre il secondo è un'unità 
+di esecuzione isolata in cui vengono eseguite le applicazioni. Un pod fornisce 
+un'infrastruttura per l'esecuzione di container correlati, spesso necessari per collaborare 
+o interagire all'interno della stessa applicazione o servizio. I container all'interno 
+di un pod condividono lo stesso indirizzo IP e la stessa porta locale, semplificando 
+la comunicazione tra di loro attraverso il loopback di rete.
+--------------------------------------------------------------------------------
+In Kubernetes, l'oggetto "Pod" è utilizzato per gestire il carico di lavoro delle 
+applicazioni in container. Un "Pod" rappresenta la più piccola unità di distribuzione 
+e può contenere uno o più container. L'obiettivo principale di un "Pod" è di creare
+ un'unità di co-locazione per i container all'interno di esso, consentendo loro di 
+condividere lo stesso contesto di rete e di archiviazione.
+
+Caratteristiche principali di un "Pod" in Kubernetes:
+
+Co-locazione: I container all'interno di un pod condividono lo stesso indirizzo IP e 
+la stessa porta locale, semplificando la comunicazione tra di loro attraverso il loopback di rete.
+
+Condivisione delle risorse: I container all'interno di un pod condividono risorse come 
+lo spazio di archiviazione e i volumi montati. Questo è utile quando i container devono 
+condividere file o dati tra di loro.
+
+Ciclo di vita condiviso: Tutti i container all'interno di un pod vengono avviati, 
+fermati e riavviati insieme. Ciò garantisce che tutti i container condividano lo
+stesso ciclo di vita e siano soggetti alle stesse regole di avvio e arresto.
+
+Scalabilità unitaria: I pod possono essere scalati creando più istanze dei pod stessi, 
+o distribuendo più pod su diversi nodi del cluster, mantenendo così l'isolamento delle risorse.
+
+Tuttavia, la gestione dei pod come unità di scalabilità diretta potrebbe non essere 
+sempre pratica. Questo è dove entra in gioco l'oggetto "ReplicaSet" 
+(ReplicaSet è una versione precedente di Deployment in Kubernetes, ma il concetto rimane simile).
+
+Un "ReplicaSet" è un oggetto di workload di più alto livello rispetto al "Pod". 
+Fornisce un'astrazione per garantire che un numero specifico di repliche di un pod 
+(con i relativi container) sia sempre in esecuzione nel cluster. Ciò significa che 
+se un pod fallisce o deve essere riprodotto per ragioni di scalabilità, il 
+"ReplicaSet" si occuperà automaticamente di gestire il numero desiderato di repliche.
+
+In pratica, un "ReplicaSet" definisce un modello di stato desiderato 
+(ad esempio, il numero di repliche) e Kubernetes si impegna a mantenere 
+lo stato attuale in linea con quello desiderato. Se il numero di repliche scende o aumenta, 
+il "ReplicaSet" si occuperà di creare o eliminare pod in modo appropriato. 
+Inoltre, il "ReplicaSet" può essere utilizzato per gestire aggiornamenti controllati dei pod, 
+consentendo il rilascio graduale di nuove versioni di un'applicazione senza causare interruzioni.
+
+In sostanza, l'oggetto "Pod" gestisce l'unità di esecuzione dei container, 
+mentre il "ReplicaSet" gestisce il numero e lo stato desiderato di tali pod all'interno del cluster.
+--------------------------------------------------------------------------------
+Differenze tra Applicazioni su Sistema Operativo Standard e in Container:
+
+Le principali differenze tra le applicazioni installate su un sistema operativo 
+standard e le applicazioni in container sono le seguenti:
+
+Isolamento: Le applicazioni in container sono completamente isolate dalle risorse
+ e dall'ambiente circostante. Possono essere eseguite con le proprie dipendenze e 
+librerie, evitando conflitti con altre applicazioni o componenti del sistema operativo.
+
+Portabilità: Le applicazioni containerizzate sono altamente portabili. 
+Possono essere spostate tra ambienti di sviluppo, test e produzione con maggiore 
+facilità, poiché tutte le dipendenze sono confezionate all'interno del container stesso.
+
+Riproducibilità: Le applicazioni containerizzate sono altamente riproducibili 
+grazie alle definizioni dei container (Dockerfile) che specificano tutte le 
+dipendenze e le configurazioni necessarie. Ciò semplifica il mantenimento di 
+ambienti coerenti tra lo sviluppo e la produzione.
+
+Scalabilità: I container consentono di scalare le applicazioni in modo più efficiente.
+ Poiché i container sono leggeri e condividono risorse del sistema operativo ospite, 
+è possibile eseguire più istanze di container su una stessa macchina o distribuirli 
+su diverse macchine in un cluster.
+
+Gestione semplificata: La gestione delle applicazioni containerizzate è semplificata 
+grazie alle funzionalità di orchestrazione come Kubernetes. 
+L'automazione delle attività di distribuzione, aggiornamento e scalabilità diventa più agevole.
+
+Platform as a Service (PaaS) e Kubernetes:
+
+"Platform as a Service" (PaaS) è un modello di distribuzione del software in cui 
+una piattaforma completa per lo sviluppo, la distribuzione e la gestione delle 
+applicazioni viene fornita come servizio. Kubernetes può essere considerato un 
+servizio di tipo PaaS in quanto fornisce un'infrastruttura completa per la 
+gestione delle applicazioni containerizzate. Ecco perché Kubernetes può essere 
+visto come un servizio di questo tipo:
+
+Automazione del Ciclo di Vita delle Applicazioni: Kubernetes automatizza molte 
+attività complesse legate alla distribuzione e alla gestione delle applicazioni, 
+come il deployment, il bilanciamento del carico, la scalabilità automatica e il rollback.
+
+Astrazione dell'Infrastruttura: Kubernetes fornisce un'astrazione che consente 
+agli sviluppatori di concentrarsi sulla definizione dello stato desiderato delle 
+applicazioni piuttosto che sulle specifiche dell'infrastruttura sottostante.
+
+Gestione delle Risorse: Kubernetes gestisce automaticamente le risorse come CPU 
+e memoria per garantire un utilizzo efficiente delle risorse e una buona performance 
+delle applicazioni.
+
+Scalabilità Orizzontale: Kubernetes facilita la scalabilità orizzontale delle 
+applicazioni, consentendo di distribuire più istanze di un'applicazione su più nodi del cluster.
+
+Distribuzione Continua: Kubernetes supporta la distribuzione continua, 
+consentendo l'aggiornamento delle applicazioni con rollout controllati e 
+rollbacks rapidi in caso di problemi.
+
+In conclusione, Kubernetes fornisce molte delle caratteristiche tipiche di una piattaforma PaaS, 
+semplificando notevolmente la gestione delle applicazioni containerizzate e offrendo una 
+soluzione per la creazione, la distribuzione e la gestione di servizi scalabili e affidabili.
+--------------------------------------------------------------------------------
