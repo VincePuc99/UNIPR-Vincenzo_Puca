@@ -80,8 +80,7 @@ Utilizzare i progetti a solo scopo informativo.
 
 ## **Autore**
 
-* **Vincenzo Puca** - *Mat.297713* - ![https://www.linkedin.com/in/vincenzo-puca-054276304/](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
-
+* **Vincenzo Puca** - *Mat.297713* - [![LinkedIN](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vincenzo-puca-054276304/)
 ## **Licenza MIT**
 
 Copyright (c) 2024 Vincenzo Puca
