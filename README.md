@@ -124,6 +124,8 @@ Progetto sviluppato con logica Raspberry Pi 3B, l'obiettivo era quello di svilup
 accessibile poi solo in ambiente LAN, sviluppato usando Raspi OS, consentendo a client esterni di accedere al server
 mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 
+---
+
 #### ATTENZIONE
 
 Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere obsoleti.
