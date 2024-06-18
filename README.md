@@ -100,6 +100,7 @@ Esercizi svolti in preparazione all'esame, argomenti essenziali:
 * Socket
 * Gestione Segnali (SIGINT-SIGUSR1-SIGUSR2)
 * Fork e processi con PID e PPID
+
 Linguaggio C in ambiente Linux.
 
 ---
