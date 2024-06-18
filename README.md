@@ -21,7 +21,7 @@ Comandi utili per lo svolgimenti di esercizi base Linux, esame svolto in ambient
 ![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?style=for-the-badge&logo=notepad%2b%2b&logoColor=black)
 ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
 
-Esercizi ed esame svolto in linguaggio assemebly NASM.
+Esercizi ed esame svolto in linguaggio Assembly NASM.
 
 ---
 
