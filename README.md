@@ -27,11 +27,12 @@ Esercizi ed esame svolto in linguaggio assmebly NASM.
 
 ### Base di Dati
 
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-Progetto di gestione dati su database MariaDB, programma scritto in python. Gestione del DB con DBEaver.
+Progetto di gestione dati su database MariaDB, programma scritto in python. Gestione del DB con DBEaver. Server hosted su macchina locale Windows 10.
 
 ---
 
