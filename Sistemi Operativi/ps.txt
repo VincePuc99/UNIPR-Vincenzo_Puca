@@ -1,0 +1,5 @@
+$ ps -C a.out
+  PID TTY          TIME CMD
+ 3699 pts/1    00:00:00 a.out
+
+$ kill -s USR1 3699
