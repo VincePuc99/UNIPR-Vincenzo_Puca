@@ -1,5 +1,5 @@
 # Progetti ed Esercizi 
-Percorso UNIPR Vincenzo Puca Mat.297113
+# Percorso UNIPR Vincenzo Puca Mat.297113
 
 Repository contenente tutto il materiale svolto per i singoli esami di programmazione. Inclusi progetti, prove demo ed esercizi svolti.
 Non verranno fornite le richieste ma soltanto le soluzioni scritte via codice.
