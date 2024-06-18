@@ -21,7 +21,7 @@ Comandi utili per lo svolgimenti di esercizi base Linux, esame svolto in ambient
 ![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?style=for-the-badge&logo=notepad%2b%2b&logoColor=black)
 ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
 
-Esercizi ed esame svolto in linguaggio assmebly NASM.
+Esercizi ed esame svolto in linguaggio assemebly NASM.
 
 ---
 
@@ -32,7 +32,7 @@ Esercizi ed esame svolto in linguaggio assmebly NASM.
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-Progetto di gestione dati su database MariaDB, programma scritto in python. Gestione del DB con DBEaver. Server hosted su macchina locale Windows 10.
+Progetto di gestione dati sensore su database MariaDB, programma scritto in Python. Gestione del DB con DBEaver. Server hosted su macchina locale LAN Windows 10.
 
 ---
 
@@ -43,7 +43,7 @@ Progetto di gestione dati su database MariaDB, programma scritto in python. Gest
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-Esercizi e progetti giochi svolti in python, non presenti ma svolta parte di programmazione C++
+Esercizi e progetti giochi, svolti in Python, non presente ma svolta parte di programmazione C++
 
 ---
 
@@ -61,7 +61,7 @@ Esercizi ed esame svolto in linguaggio C++.
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
-Progetti svolti con tecniche di OOP in java, presenti diagramma e JavaDOC di ogni progetto.
+Progetti svolti con tecniche di OOP Java, presenti diagrammi UML e JavaDOC di ogni progetto.
 
 ---
 
@@ -123,7 +123,7 @@ Linguaggi web quali CSS e HTML, presente logica di encrypting dei dati utente.
 ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
-Progetto sviluppato con logica Raspberry Pi 3B, l'obiettivo era quello di sviluppare un server FTP in ambiente Linux
+Progetto sviluppato con logica Raspberry Pi 3B, l'obiettivo era sviluppare un server FTP in ambiente Linux
 accessibile poi solo in ambiente LAN, sviluppato usando Raspi OS, consentendo a client esterni di accedere al server
 mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 
@@ -147,6 +147,6 @@ Utilizzare i progetti a solo scopo informativo.
 * [NotePad++](https://notepad-plus-plus.org/downloads/) - Programma scrittura linguaggio C ambiente Linux
 
 ## **Autore**
-**Vincenzo Puca** - *Mat.297713*
+**Vincenzo Puca** - *Mat.297113*
 
 [![LinkedIN](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vincenzo-puca-054276304/)
