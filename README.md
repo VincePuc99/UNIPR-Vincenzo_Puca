@@ -14,6 +14,8 @@ Non verranno fornite le richieste ma soltanto le soluzioni scritte via codice.
 
 Comandi utili per lo svolgimenti di esercizi base Linux, esame svolto in ambiente AWS Fedora.
 
+---
+
 ### Architettura dei Calcolatori elettronici
 
 ![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?style=for-the-badge&logo=notepad%2b%2b&logoColor=black)
