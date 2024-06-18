@@ -66,7 +66,7 @@ mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere obsoleti.
 Utilizzare i progetti a solo scopo informativo.
 
-## **Built With**
+## **Tool Utilizzati**
 
 * [VS Code](https://code.visualstudio.com/) - Programma scrittura linguaggi (Java - Python)
 * [DOSBOX](https://www.dosbox.com/) - Emulatore 8086 (Assembly NASM)
@@ -80,7 +80,7 @@ Utilizzare i progetti a solo scopo informativo.
 
 ## **Autore**
 
-* **Vincenzo Puca** - *Mat.297713* - [LinkedIN](https://www.linkedin.com/in/vincenzo-puca-054276304/)
+* **Vincenzo Puca** - *Mat.297713* - ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)(https://www.linkedin.com/in/vincenzo-puca-054276304/)
 
 ## **Licenza MIT**
 
