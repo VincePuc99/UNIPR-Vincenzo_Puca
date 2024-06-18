@@ -95,10 +95,10 @@ personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnolog
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?style=for-the-badge&logo=notepad%2b%2b&logoColor=black)
 
-Esercizi svolti in preparazione all'esame, argomnti essenziali:
+Esercizi svolti in preparazione all'esame, argomenti essenziali:
 * Client-Server
 * Socket
-* Gestione Segnali
+* Gestione Segnali (SIGINT-SIGUSR1-SIGUSR2)
 * Fork e processi con PID e PPID
 Linguaggio C in ambiente Linux.
 
