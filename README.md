@@ -52,7 +52,7 @@ Esercizi e progetti giochi, svolti in Python, non presente ma svolta parte di pr
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
-Esercizi ed esame svolto in linguaggio C++.
+Esercizi ed esame svolti in linguaggio C++.
 
 ---
 
