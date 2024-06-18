@@ -138,7 +138,7 @@ Utilizzare i progetti a solo scopo informativo.
 * [XCode](https://developer.apple.com/xcode/) - Programma scrittura linguaggi - Sviluppo applicativo iOS (C++ - Objective C)
 * [Android Studio](https://developer.android.com/studio?hl=it) - Sviluppo applicativo Android (Java)
 * [REACT](https://it.legacy.reactjs.org/) - Infrastruttura scrittura Sito Web
-* [Gatsby](https://www.gatsbyjs.com/) -Infrastruttura scrittura Sito Web
+* [Gatsby](https://www.gatsbyjs.com/) - Infrastruttura scrittura Sito Web
 * [DBEaver](https://dbeaver.io/) - Programma di gestione DataBase
 * [MariaDB](https://mariadb.org/) - Infrastruttura gestione DataBase
 * [NotePad++](https://notepad-plus-plus.org/downloads/) - Programma scrittura linguaggio C ambiente Linux
