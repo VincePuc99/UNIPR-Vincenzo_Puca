@@ -112,7 +112,7 @@ Linguaggio C in ambiente Linux.
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 Sito web sviluppato con tecnologia REACT & GATSBY.
-Linguaggi web quali CSS e HTML, presente logica di encryipting dei dati utente.
+Linguaggi web quali CSS e HTML, presente logica di encrypting dei dati utente.
 
 ---
 
