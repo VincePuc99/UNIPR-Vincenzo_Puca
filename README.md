@@ -1,9 +1,9 @@
-# Percorso UNIPR Vincenzo Puca Mat.297113
+# **Percorso UNIPR Vincenzo Puca Mat.297113**
 
 Repository contenente tutto il materiale svolto per i singoli esami di programmazione. Inclusi progetti, prove demo ed esercizi svolti.
 Non verranno fornite le richieste ma soltanto le soluzioni scritte via codice.
 
-## Descrizioni contenuti
+## **Descrizioni contenuti**
 
 ### Amministrazione di Sistemi IT e Cloud
 
@@ -37,7 +37,7 @@ Android - Java - Galaxy S8 - Android Studio
 Calcolatore di valute che alla richiesta API ad un sito esterno risponde con una documentazione JSON,
 scompattata poi all'interno del programma e mostrata all'utente tramite interfaccia. Possibilità di usare valute diverse.
 
-iOS - Onjective C - iPhone 13 Pro - XCode
+iOS - Objective C - iPhone 13 Pro - XCode
 Applicativo che consente la registrazione e la notifica dei vari "Places" su una mappa interattiva, sono stati
 personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnologia di notifica all'avvicinarsi al pin.
 
@@ -66,7 +66,7 @@ mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere obsoleti.
 Utilizzare i progetti a solo scopo informativo.
 
-## Built With
+## **Built With**
 
 * [VS Code](https://code.visualstudio.com/) - Programma scrittura linguaggi (Java - Python)
 * [DOSBOX](https://www.dosbox.com/) - Emulatore 8086 (Assembly NASM)
@@ -78,11 +78,11 @@ Utilizzare i progetti a solo scopo informativo.
 * [MariaDB](https://mariadb.org/) - Infrastruttura gestione DataBase
 * [NotePad++](https://notepad-plus-plus.org/downloads/) - Programma scrittura linguaggio C ambiente Linux
 
-## Authore
+## **Autore**
 
 * **Vincenzo Puca** - *Mat.297713* - [LinkedIN]([https://github.com/PurpleBooth](https://www.linkedin.com/in/vincenzo-puca-054276304/))
 
-## Licenza MIT
+## **Licenza MIT**
 
 Copyright (c) 2024 Vincenzo Puca
 
