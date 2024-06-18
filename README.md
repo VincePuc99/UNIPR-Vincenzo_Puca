@@ -3,7 +3,7 @@
 Repository contenente tutto il materiale svolto per i singoli esami di programmazione. Inclusi progetti, prove demo ed esercizi svolti.
 Non verranno fornite le richieste ma soltanto le soluzioni scritte via codice.
 
-## **Descrizioni contenuti**
+## **Descrizione contenuti**
 
 ### Amministrazione di Sistemi IT e Cloud
 
@@ -44,10 +44,10 @@ personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnolog
 ### Sistemi Operativi
 
 Esercizi svolti in preparazione all'esame, argomnti essenziali:
--Client-Server
--Socket
--Gestione Segnali
--Fork e processi con PID e PPID
+* Client-Server
+* Socket
+* Gestione Segnali
+* Fork e processi con PID e PPID
 Linguaggio C in ambiente Linux.
 
 ### Tecnologie Internet
