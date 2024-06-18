@@ -1,0 +1,11 @@
+https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-18-04
+
+https://www.raspberrypi-spy.co.uk/2018/05/creating-ftp-server-with-raspberry-pi/
+
+https://security.appspot.com/vsftpd.html
+
+https://www.raspberrypi.com
+
+https://linuxize.com/post/how-to-setup-ftp-server-with-vsftpd-on-raspberry-pi/
+
+https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_NTY0MWJlOTctYTU1MS00NDY2LWJiNjAtNTUyNGI4ZjZkOTg2%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522bb064bc5-b7a8-41ec-babe-d7beb3faeb1c%2522%252c%2522Oid%2522%253a%252273665215-9c2f-4c8a-be3a-9f025c52dd9a%2522%257d%26anon%3Dtrue&type=meetup-join&deeplinkId=e48395a0-c4eb-41c4-a16f-febc0de406a7&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true
