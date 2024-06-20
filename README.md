@@ -130,9 +130,9 @@ mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 
 ---
 
-#### ATTENZIONE
+#### ATTENZIONE ⚠️
 
-Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere obsoleti.
+Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere deprecati.
 Utilizzare i progetti a solo scopo informativo.
 
 ## **Tool Utilizzati**
