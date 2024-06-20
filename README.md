@@ -122,6 +122,7 @@ Linguaggi web quali CSS e HTML, presente logica di encrypting dei dati utente.
 ### Telematica
 
 ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
+![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
 Progetto sviluppato con logica Raspberry Pi 3B, l'obiettivo era sviluppare un server FTP in ambiente Linux
