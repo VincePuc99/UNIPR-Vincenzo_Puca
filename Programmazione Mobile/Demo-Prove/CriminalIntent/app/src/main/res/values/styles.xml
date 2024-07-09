@@ -1,0 +1,5 @@
+<resources>
+    <style name="DarkBlueButton" parent="Theme.MaterialComponents.Light">
+        <item name="android:background">@color/red</item>
+    </style>
+</resources>
