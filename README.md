@@ -5,7 +5,7 @@ Non verranno fornite le richieste ma soltanto le soluzioni scritte via codice.
 
 ## **Descrizione contenuti**
 
-### Amministrazione di Sistemi IT e Cloud [a link](https://github.com/user/repo/blob/branch/other_file.md)
+### [Amministrazione di Sistemi IT e Cloud](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Amministrazione%20di%20Sistemi%20IT%20e%20Cloud)
 
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
@@ -16,7 +16,7 @@ Comandi utili per lo svolgimenti di esercizi base Linux, esame svolto in ambient
 
 ---
 
-### Architettura dei Calcolatori elettronici
+### [Architettura dei Calcolatori elettronici](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Architettura%20dei%20Calcolatori%20elettronici)
 
 ![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?style=for-the-badge&logo=notepad%2b%2b&logoColor=black)
 ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
@@ -25,7 +25,7 @@ Esercizi ed esame svolti in linguaggio Assembly NASM.
 
 ---
 
-### Base di Dati
+### [Base di Dati](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Base%20di%20Dati)
 
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -36,7 +36,7 @@ Progetto di gestione dati sensore su database MariaDB, programma scritto in Pyth
 
 ---
 
-### Fondamenti di Informatica
+### [Fondamenti di Informatica](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Fondamenti%20di%20Informatica)
 
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -47,7 +47,7 @@ Esercizi e progetti giochi, svolti in Python, non presente ma svolta parte di pr
 
 ---
 
-### Fondamenti di Programmazione (C++)
+### [Fondamenti di Programmazione](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Fondamenti%20di%20Programmazione%20(C%2B%2B))
 
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -56,7 +56,7 @@ Esercizi ed esame svolti in linguaggio C++.
 
 ---
 
-### Ingegneria del Software (Java)
+### [Ingegneria del Software](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Ingegneria%20del%20Software%20(Java))
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -65,7 +65,7 @@ Progetti svolti con tecniche di OOP Java, presenti diagrammi UML e JavaDOC di og
 
 ---
 
-### Programmazione Mobile
+### [Programmazione Mobile](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Programmazione%20Mobile)
 
 ![Objective-C](https://img.shields.io/badge/OBJECTIVE--C-%233A95E3.svg?style=for-the-badge&logo=apple&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
@@ -88,7 +88,7 @@ personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnolog
 
 ---
 
-### Sistemi Operativi
+### [Sistemi Operativi](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Sistemi%20Operativi)
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
@@ -105,7 +105,7 @@ Linguaggio C in ambiente Linux.
 
 ---
 
-### Tecnologie Internet
+### [Tecnologie Internet](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Tecnologie%20Internet)
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -119,7 +119,7 @@ Linguaggi web quali CSS e HTML, presente logica di encrypting dei dati utente.
 
 ---
 
-### Telematica
+### [Telematica](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Telematica)
 
 ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
@@ -131,7 +131,7 @@ mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 
 ---
 
-#### ATTENZIONE ⚠️
+#### ⚠️ ATTENZIONE ⚠️
 
 Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere deprecati.
 Utilizzare i progetti a solo scopo informativo.
