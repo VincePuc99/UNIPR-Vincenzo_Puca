@@ -18,7 +18,7 @@ import okhttp3.Response;
 public class APIRequester {
     private static String sApiData=null;
     private static String[] sApiDataWeekly=new String[7];
-    private static final String sAPIKey ="sbFjyHFBe2lQChNcEhjGVDGJxSARhsjE";
+    private static final String sAPIKey ="API KEY";
 
     //https://apilayer.com/marketplace/exchangerates_data-api?e=Sign+In&l=Success
 
