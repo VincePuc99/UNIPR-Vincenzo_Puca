@@ -150,5 +150,3 @@ Utilizzare i progetti a solo scopo informativo.
 
 ## **Autore**
 **Vincenzo Puca** - *Mat.297113*
-
-[![LinkedIN](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vincenzo-puca-054276304/)
