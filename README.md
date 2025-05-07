@@ -84,7 +84,15 @@ scompattata poi all'interno del programma e mostrata all'utente tramite interfac
 iOS - Objective C - iPhone 13 Pro - XCode
 
 Applicativo che consente la registrazione e la notifica dei vari "Places" su una mappa interattiva, sono stati
-personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnologia di notifica all'avvicinarsi al pin.
+personalizzati pin e hover secondo richiesta dell'esaminatore. Presente tecnologia di notifica all'avvicinarsi al pin. <br />
+
+
+<img src="https://github.com/user-attachments/assets/f2783e1d-e069-48f3-8e4a-d63ec2428535" width="62" height="92" align="right">
+
+Un enorme ringraziamento a:
+```
+Android Programming: The Big Nerd Ranch Guide - ISBN 9780137645541
+```
 
 ---
 
