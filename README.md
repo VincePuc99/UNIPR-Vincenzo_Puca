@@ -189,7 +189,7 @@ Grokking Algorithms, Second Edition - ISBN 9781633438538
 
 ---
 
-###  Architettura dei calcolatori elettronici [➡️](./Architettura%20dei%20calcolatori%20elettronici)
+###  Architettura dei calcolatori elettronici UNIMarconi [➡️](./Architettura%20dei%20calcolatori%20elettronici%20UNIMarconi)
 
 ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
 ![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
