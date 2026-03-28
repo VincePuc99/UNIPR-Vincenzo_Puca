@@ -1,9 +1,9 @@
-# **Percorso Vincenzo Puca UNIPR Mat.297113 - UNIMarconi Mat.0065721**
+# **Percorso universitario Vincenzo Puca** <br /> **UNIPR Mat.297113 - UNIMarconi Mat.0065721**
 
-Repository contenente tutto il materiale svolto per i singoli esami di programmazione.<br />
+Repository contenente tutto il materiale svolto per i singoli esami.<br />
 Inclusi progetti, prove demo ed esercizi svolti.<br />
 
-## **UNIPR**
+## [**UNIPR**](https://www.unipr.it)
 
 ### Amministrazione di Sistemi IT e Cloud [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Amministrazione%20di%20Sistemi%20IT%20e%20Cloud)
 
@@ -139,7 +139,7 @@ mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 
 ---
 
-## **UNIMarconi**
+## [**UNIMarconi**](https://www.unimarconi.it/)
 
 ###  Fondamenti di Cybersecurity [➡️](https://github.com/VincePuc99/UNIMarconi-Vincenzo_Puca/tree/main/Fondamenti%20di%20Cybersecurity)
 
