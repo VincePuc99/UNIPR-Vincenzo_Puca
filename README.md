@@ -5,7 +5,7 @@ Inclusi progetti, prove demo ed esercizi svolti.<br />
 
 ## [**UNIPR**](https://www.unipr.it)
 
-### Amministrazione di Sistemi IT e Cloud [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Amministrazione%20di%20Sistemi%20IT%20e%20Cloud)
+### Amministrazione di Sistemi IT e Cloud [➡️](./Amministrazione%20di%20Sistemi%20IT%20e%20Cloud)
 
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
@@ -16,7 +16,7 @@ Comandi utili per lo svolgimenti di esercizi base Linux, esame svolto in ambient
 
 ---
 
-### Architettura dei Calcolatori elettronici [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Architettura%20dei%20Calcolatori%20elettronici)
+### Architettura dei Calcolatori elettronici [➡️](./Architettura%20dei%20Calcolatori%20elettronici)
 
 ![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?style=for-the-badge&logo=notepad%2b%2b&logoColor=black)
 ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
@@ -25,7 +25,7 @@ Esercizi ed esame svolti in linguaggio Assembly NASM.
 
 ---
 
-### Base di Dati [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Base%20di%20Dati)
+### Base di Dati [➡️](./Base%20di%20Dati)
 
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -36,7 +36,7 @@ Progetto di gestione dati sensore su database MariaDB, programma scritto in Pyth
 
 ---
 
-### Fondamenti di Informatica [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Fondamenti%20di%20Informatica)
+### Fondamenti di Informatica [➡️](./Fondamenti%20di%20Informatica)
 
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -47,7 +47,7 @@ Esercizi e progetti giochi, svolti in Python, non presente ma svolta parte di pr
 
 ---
 
-### Fondamenti di Programmazione [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Fondamenti%20di%20Programmazione%20(C%2B%2B))
+### Fondamenti di Programmazione [➡️](./Fondamenti%20di%20Programmazione%20(C%2B%2B))
 
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -56,7 +56,7 @@ Esercizi ed esame svolti in linguaggio C++.
 
 ---
 
-### Ingegneria del Software [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Ingegneria%20del%20Software%20(Java))
+### Ingegneria del Software [➡️](./Ingegneria%20del%20Software%20(Java))
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -65,7 +65,7 @@ Progetti svolti con tecniche di OOP Java, presenti diagrammi UML e JavaDOC di og
 
 ---
 
-### Programmazione Mobile [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Programmazione%20Mobile)
+### Programmazione Mobile [➡️](./Programmazione%20Mobile)
 
 ![Objective-C](https://img.shields.io/badge/OBJECTIVE--C-%233A95E3.svg?style=for-the-badge&logo=apple&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
@@ -96,7 +96,7 @@ Android Programming: The Big Nerd Ranch Guide - ISBN 9780137645541
 
 ---
 
-### Sistemi Operativi [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Sistemi%20Operativi)
+### Sistemi Operativi [➡️](./Sistemi%20Operativi)
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
@@ -113,7 +113,7 @@ Linguaggio C in ambiente Linux.
 
 ---
 
-### Tecnologie Internet [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Tecnologie%20Internet)
+### Tecnologie Internet [➡️](./Tecnologie%20Internet)
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -127,7 +127,7 @@ Linguaggi web quali CSS e HTML, presente logica di encrypting dei dati utente.
 
 ---
 
-### Telematica [➡️](https://github.com/VincePuc99/UNIPR-Vincenzo_Puca/tree/main/Telematica)
+### Telematica [➡️](./Telematica)
 
 ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
@@ -141,7 +141,7 @@ mediante autenticazione, applicativo di test per l'accesso: FileZilla.
 
 ## [**UNIMarconi**](https://www.unimarconi.it/)
 
-###  Fondamenti di Cybersecurity [➡️](https://github.com/VincePuc99/UNIMarconi-Vincenzo_Puca/tree/main/Fondamenti%20di%20Cybersecurity)
+###  Fondamenti di Cybersecurity [➡️](./Fondamenti%20di%20Cybersecurity)
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
@@ -153,7 +153,7 @@ L'ambiente di sviluppo è stato installato su RPi 4B 8GB RAM - Debian, mediante 
 
 ---
 
-###  Reti Logiche e Neurali [➡️](https://github.com/VincePuc99/UNIMarconi-Vincenzo_Puca/tree/main/Reti%20Logiche%20e%20Neurali)
+###  Reti Logiche e Neurali [➡️](./Reti%20Logiche%20e%20Neurali)
 
 ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
 ![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
@@ -163,7 +163,7 @@ Riassunto completo del corso in preparazione all'esame.
 
 ---
 
-###  Metodi e strategie di comunicazione digitale [➡️](https://github.com/VincePuc99/UNIMarconi-Vincenzo_Puca/tree/main/Metodi%20e%20strategie%20di%20comunicazione%20digitale)
+###  Metodi e strategie di comunicazione digitale [➡️](./Metodi%20e%20strategie%20di%20comunicazione%20digitale)
 
 ![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
 ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
@@ -173,13 +173,13 @@ Riassunto completo del corso in preparazione all'esame, contenuti SEO, digital m
 
 ---
 
-###  Algoritmi e Strutture Dati [➡️](https://github.com/VincePuc99/UNIMarconi-Vincenzo_Puca/tree/main/Algoritmi%20e%20Strutture%20Dati)
+###  Algoritmi e Strutture Dati [➡️](./Algoritmi%20e%20Strutture%20Dati)
 
 ![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white)
 ![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
 ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
 
-<img src="https://github.com/user-attachments/assets/7ba6e7a5-b5bf-40d7-92b7-fc88a4a49b5e" width="80" height="115" align="right">
+<img src="https://github.com/user-attachments/assets/d8791034-792d-4007-ac43-ecdbdbf00fa7" width="80" height="115" align="right">
 
 Riassunto completo del corso in preparazione all'esame con programmi in pseudo-python. <br />
 Un enorme ringraziamento a:
@@ -189,14 +189,14 @@ Grokking Algorithms, Second Edition - ISBN 9781633438538
 
 ---
 
-###  Architettura dei calcolatori elettronici [➡️](https://github.com/VincePuc99/UNIMarconi-Vincenzo_Puca/tree/main/Architettura%20dei%20calcolatori%20elettronici)
+###  Architettura dei calcolatori elettronici [➡️](./Architettura%20dei%20calcolatori%20elettronici)
 
 ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
 ![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
 ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
 ![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white)
 
-<img src="https://github.com/user-attachments/assets/58655dda-25b4-47bb-a011-43d99cc3a91e" width="80" height="115" align="right">
+<img src="https://github.com/user-attachments/assets/9cc987d4-09e0-4d11-9532-a4cab3e18639" width="80" height="115" align="right">
 
 Riassunto completo del corso in preparazione all'esame con programmi in linguaggio ARM. <br />
 Un enorme ringraziamento a:
@@ -206,7 +206,7 @@ Introduzione alla programmazione su ARM. - ISBN: 9788832934267
 
 ---
 
-###  Linked Data & Web Semantico [➡️](https://github.com/VincePuc99/UNIMarconi-Vincenzo_Puca/tree/main/Linked%20Data%20%26%20Web%20Semantico)
+###  Linked Data & Web Semantico [➡️](./Linked%20Data%20%26%20Web%20Semantico)
 
 ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
 ![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
