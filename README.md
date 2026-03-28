@@ -16,7 +16,7 @@ Comandi utili per lo svolgimenti di esercizi base Linux, esame svolto in ambient
 
 ---
 
-### Architettura dei Calcolatori elettronici [➡️](./Architettura%20dei%20Calcolatori%20elettronici)
+### Architettura dei calcolatori elettronici UNIPR [➡️](./Architettura%20dei%20calcolatori%20elettronici%20UNIPR)
 
 ![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?style=for-the-badge&logo=notepad%2b%2b&logoColor=black)
 ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
