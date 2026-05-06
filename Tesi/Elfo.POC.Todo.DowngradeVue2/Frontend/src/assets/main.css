@@ -1,0 +1,380 @@
+/* ===================================================
+   GLOBAL STYLES — TodoApp
+   =================================================== */
+
+/* ----- Reset / Base ----- */
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.theme--light.v-application,
+.theme--dark.v-application {
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, #1E90FF, #FF6347, #32CD32, #FF6347);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.v-application--wrap {
+  background: transparent;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ----- Layout contenitore pagina ----- */
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* ----- Card base (Home) ----- */
+.v-card.rounded-box {
+  border-radius: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  box-sizing: border-box;
+  width: 440px;
+  height: 310px;
+  padding: 20px;
+}
+
+/* Dashboard: sovrascrive dimensioni della card base */
+.v-card.rounded-box.dashboard-card {
+  width: 100%;
+  max-width: 1000px;
+  height: 85vh;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 30px;
+  max-height: none;
+  overflow-y: visible;
+}
+
+/* ----- Tipografia ----- */
+.item-box {
+  margin: 10px 0;
+}
+
+.app-headline {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* Login: titolo più piccolo */
+.login-box .app-headline,
+.edit-box .edit-title {
+  font-size: 2rem;
+}
+
+.edit-title {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.v-card__subtitle.app-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.v-card__subtitle.app-subtitle .app-subheading {
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  opacity: 1;
+}
+
+/* ----- Pulsanti condivisi ----- */
+.v-btn.custom-btn {
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  text-transform: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.v-btn.custom-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Login: pulsanti leggermente più piccoli */
+.login-box .v-btn.custom-btn {
+  min-width: 110px;
+  height: 38px;
+}
+
+.v-card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ----- Icone ----- */
+.v-icon {
+  font-size: 24px;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- Login box ----- */
+.v-card.login-box {
+  border-radius: 35px;
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.app-banner-layer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  pointer-events: none;
+}
+
+.app-banner {
+  min-width: 320px;
+  max-width: min(460px, calc(100vw - 32px));
+  border-radius: 14px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 14px 18px;
+}
+
+.app-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.app-banner--success .v-icon {
+  color: #2e7d32;
+}
+
+.app-banner--error .v-icon {
+  color: #c62828;
+}
+
+.app-banner--info .v-icon {
+  color: #1565c0;
+}
+
+.banner-pop-enter-active,
+.banner-pop-leave-active {
+  transition: opacity 0.22s ease;
+}
+
+.banner-pop-enter-active .app-banner,
+.banner-pop-leave-active .app-banner {
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.banner-pop-enter,
+.banner-pop-enter-from,
+.banner-pop-leave-to {
+  opacity: 0;
+}
+
+.banner-pop-enter .app-banner,
+.banner-pop-enter-from .app-banner,
+.banner-pop-leave-to .app-banner {
+  opacity: 0;
+  transform: translateY(14px) scale(0.96);
+}
+
+.banner-pop-leave,
+.banner-pop-enter-to,
+.banner-pop-leave-from {
+  opacity: 1;
+}
+
+.banner-pop-leave .app-banner,
+.banner-pop-enter-to .app-banner,
+.banner-pop-leave-from .app-banner {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ----- Dialog Aggiungi/Modifica todo ----- */
+.v-card.edit-box {
+  border-radius: 35px;
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.v-btn.edit-btn {
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  text-transform: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 110px;
+  height: 38px;
+}
+
+.v-btn.edit-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.cancel-btn .v-icon {
+  background: linear-gradient(135deg, #b71c1c 0%, #e53935 55%, #fb8c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.save-btn .v-icon {
+  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 55%, #4fc3f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.field-spacing {
+  margin-bottom: 10px;
+}
+
+/* ----- Todo list ----- */
+.todo-list {
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+  background-color: #f0f0f0;
+}
+
+.todo-content {
+  flex: 1;
+}
+
+.todo-title {
+  color: #333;
+  font-size: 1rem;
+}
+
+.todo-title-completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  opacity: 0.75;
+}
+
+.todo-description {
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.todo-status-completed {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.todo-status-progress {
+  color: #1565c0;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-left: 16px;
+}
+
+.add-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ----- Icone con gradienti ----- */
+.add-btn .v-icon {
+  background: linear-gradient(135deg, #1b5e20 0%, #43a047 55%, #a5d6a7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.edit-gradient-btn .v-icon {
+  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 55%, #4fc3f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.delete-gradient-btn .v-icon {
+  background: linear-gradient(135deg, #b71c1c 0%, #e53935 55%, #fb8c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

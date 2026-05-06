@@ -1,0 +1,28 @@
+{
+  "name": "frontend-3",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@mdi/js": "^7.4.47",
+    "axios": "^1.13.6",
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5",
+    "vue-template-compiler": "^2.7.16",
+    "vuetify": "^2.7.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "^2.3.3",
+    "sass": "^1.98.0",
+    "vite": "^4.5.5"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}
