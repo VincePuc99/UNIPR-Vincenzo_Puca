@@ -5,7 +5,11 @@ Inclusi progetti, prove demo ed esercizi svolti.<br />
 
 ## Tesi di Laurea
 ### Cybersecurity Applicativa: Metodologie per la sicurezza del codice e gestione delle vulnerabilità 
-Svolta in collaborazione con il CTO Aziendale presso [ELFO S.r.l.](https://www.elfo.net/) 
+Svolta in collaborazione con il CTO Aziendale presso [ELFO S.r.l.](https://www.elfo.net/) <br />
+
+Vengono illustrati i principi di protezione della triade CIA (Confidentiality, Integrity, Availability). <br />
+Successivamente viene analizzata l’evoluzione dei modelli di sviluppo software, dal modello Waterfall fino al DevSecOps. <br />
+Infine, vengono confrontati diversi approcci di analisi dei progetti per il rilevamento delle vulnerabilità software, con particolare attenzione al processo di identificazione e correzione delle stesse.
 
 <img width="353" height="500" align="center" alt="Frontespizio_Tesi" src="https://github.com/user-attachments/assets/7169628c-dca2-49d4-8094-9bb1c3c5ddf4" />
 
