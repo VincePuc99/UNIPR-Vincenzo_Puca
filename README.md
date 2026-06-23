@@ -3,6 +3,12 @@
 Repository contenente tutto il materiale svolto per i singoli esami.<br />
 Inclusi progetti, prove demo ed esercizi svolti.<br />
 
+## Tesi di Laurea
+### Cybersecurity Applicativa: Metodologie per la sicurezza del codice e gestione delle vulnerabilità 
+Svolta in collaborazione con il CTO Aziendale presso [ELFO S.r.l.](https://www.elfo.net/) 
+
+<img width="353" height="500" align="center" alt="Frontespizio_Tesi" src="https://github.com/user-attachments/assets/7169628c-dca2-49d4-8094-9bb1c3c5ddf4" />
+
 ## [**UNIPR**](https://www.unipr.it)
 
 ### Amministrazione di Sistemi IT e Cloud [➡️](./Amministrazione%20di%20Sistemi%20IT%20e%20Cloud)
