@@ -4,7 +4,7 @@ Repository contenente tutto il materiale svolto per i singoli esami.<br />
 Inclusi progetti, prove demo ed esercizi svolti.<br />
 
 ## Tesi di Laurea
-### Cybersecurity Applicativa: Metodologie per la sicurezza del codice e gestione delle vulnerabilità 
+### Cybersecurity Applicativa: Metodologie per la sicurezza del codice e gestione delle vulnerabilità [➡️](./Tesi)
 Svolta in collaborazione con il CTO Aziendale presso [ELFO S.r.l.](https://www.elfo.net/) <br />
 
 Vengono illustrati i principi di protezione della triade CIA (Confidentiality, Integrity, Availability). <br />
@@ -227,10 +227,9 @@ Riassunto completo del corso in preparazione all'esame, contenuti linked e open 
 ---
 
 
-#### ⚠️ ATTENZIONE ⚠️
-
-Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere deprecati.<br />
-Utilizzare i progetti a solo scopo informativo.
+>[!WARNING]
+>Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere **deprecati**.<br />
+>Utilizzare i progetti a solo scopo informativo.
 
 ## **Tool Utilizzati**
 
