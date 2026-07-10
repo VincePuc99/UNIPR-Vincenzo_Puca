@@ -226,6 +226,16 @@ Riassunto completo del corso in preparazione all'esame, contenuti linked e open 
 
 ---
 
+###  Fisica Generale [➡️](./Fisica%20Generale)
+
+![Microsoft Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
+![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white)
+![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
+
+Riassunto completo del corso in preparazione all'esame, contenuti completi Fisica 1 e 2.
+
+---
+
 
 >[!WARNING]
 >Le librerie e i metodi utilizzati nei progetti sopracitati potrebbero essere **deprecati**.<br />
