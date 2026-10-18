@@ -1,0 +1,10 @@
+# Build artifacts
+Backend/bin/
+Backend/obj/
+
+# Local runtime logs
+debug.log
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

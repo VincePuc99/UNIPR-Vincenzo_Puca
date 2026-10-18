@@ -1,0 +1,52 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.0",
+    "crypto-js": "^4.0.0",
+    "express": "^4.13.3",
+    "fs": "*",
+    "gatsby": "^3.4.1",
+    "gatsby-image": "^3.4.0",
+    "gatsby-plugin-image": "^1.4.1",
+    "gatsby-plugin-react-helmet": "^4.7.0",
+    "gatsby-plugin-sharp": "^3.4.2",
+    "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-transformer-sharp": "^3.4.0",
+    "i": "^0.3.6",
+    "morgan": "^1.6.1",
+    "npm": "^7.16.0",
+    "passport": "^0.2.2",
+    "passport-http-bearer": "^1.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "stream": "^0.0.2",
+    "timers": "^0.1.1",
+    "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Weather Extra</string>
+    <string name="password_hint">Password</string>
+    <string name="username_hint">Nome Utente</string>
+    <string name="login_button">Accedi</string>
+    <string name="register_button">Registrati</string>
+    <string name="submit_button">Invia informazioni</string>
+    <string name="logout">Logout</string>
+    <string name="current_city">Città Selezionata</string>
+    <string name="city_sample">City Sample</string>
+    <string name="degree_text">%1$s°</string>
+    <string name="minmaxdegree_single_recycle">↓ %1$s°\n↑ %2$s°</string>
+    <string name="current_clouds">%1$s%%</string>
+    <string name="currentwind">%1$s ⚍  %2$s ☇  %3$s ⚟</string>
+    <string name="currenthumdity">%1$s%%</string>
+    <string name="last_updated">⟳ %1$s</string>
+    <string name="rainmm">%1$smm</string>
+    <string name="paese_seelzionato">Paese Selezionato</string>
+    <string name="title_activity_weather_map">WeatherMapActivity</string>
+</resources>

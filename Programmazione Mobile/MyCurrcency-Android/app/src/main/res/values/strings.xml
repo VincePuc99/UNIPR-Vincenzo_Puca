@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">MyCurrency</string>
+    <string name="convert_curr">Converti</string>
+    <string name="text_box_result">Risultato</string>
+    <string name="starting_currency">Valuta di partenza</string>
+    <string name="ending_currency">Valuta convertita</string>
+    <string name="conn_error_body">L\'applicazione non funzionerà come previsto</string>
+    <string name="conn_error_title">Connessione Assente</string>
+    <string name="save_currency">Aggiungi ai preferiti</string>
+    <string name="select_from_saved_btn">Seleziona dai preferiti</string>
+    <string name="errorAPIMessage">Errore API</string>
+    <string name="DialogTitleShowList">Lista Preferiti</string>
+    <string name="conversion_done">Conversione riuscita</string>
+    <string name="conversion_requested">Conversione richiesta</string>
+    <string name="favourite_added">Aggiunti ai preferiti</string>
+    <string name="removeAllFav">Rimuovi tutti i preferiti</string>
+    <string name="favourite_removed">Tutti i preferiti rimossi</string>
+    <string name="no_favourites">Nessun preferito</string>
+    <string name="favourites_loaded">Preferiti caricati</string>
+    <string name="btn_weekly_change">Cambio settimanale</string>
+    <string name="default_SpinIn">1</string>
+    <string name="weekly_title_dialog">Cambi settimanali</string>
+    <string name="favourites_dialog_title">Scegli una coppia di preferiti</string>
+    <string name="data_request_weekly">Dati richiesti attendere…</string>
+    <string name="favourites_title_ui">Sezione Valute Preferite</string>
+    <string name="dev_name">By Vincenzo Puca 297113</string>
+    <string-array name="currencies_array">
+        <item>EUR</item>
+        <item>USD</item>
+        <item>GBP</item>
+        <item>ARS</item>
+        <item>TRY</item>
+        <item>EGP</item>
+        <item>VES</item>
+    </string-array>
+</resources>

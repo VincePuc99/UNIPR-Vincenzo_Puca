@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CriminalIntent</string>
+    <string name="crime_title_hint">Inserisci un titolo per il crimine.</string>
+    <string name="crime_title_label">Titoli</string>
+    <string name="crime_datails_label">Dettagli</string>
+    <string name="crime_solved_label">Caso risolto</string>
+    <string name="contact_police_label">Contatta la polizia</string>
+    <string name="date_picker_title">Data del sinistro:</string>
+    <string name="time_string">Orario del sinistro</string>
+    <string name="new_crime">Nuovo Crimine</string>
+    <string name="show_subtitle">Mostra sottotitolo</string>
+    <string name="hide_subtitle">Nascondi sottotitolo</string>
+    <string name="delete_crime">Elimina Crimine</string>
+    <string name="empty">Non sono presenti Crimini</string>
+    <string name="crime_suspect_text">Scegli sospettato</string>
+    <string name="crime_report_text">Invia report sul crimine</string>
+    <string name="crime_report">%1$s!
+        The crime was discovered on %2$s. %3$s, and %4$s </string>
+    <string name="crime_report_solved">The case is solved</string>
+    <string name="crime_report_unsolved">The case is not solved</string>
+    <string name="crime_report_no_suspect">there is no suspect.</string>
+    <string name="crime_report_suspect">the suspect is %s.</string>
+    <string name="crime_report_subject">CriminalIntent Crime Report</string>
+    <string name="send_report">Send crime report via</string>
+    <string name="call_suspect">Chiama il sospettato</string>
+    <string name="zoom_in_title">Foto Originale</string>
+
+    <plurals name="subtitle_plural">
+        <item quantity="one">%1$d crimine</item>
+        <item quantity="other">%1$d crimini</item>
+    </plurals>
+</resources>

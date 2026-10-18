@@ -1,0 +1,72 @@
+----------------------ESA1
+Descrivere il quickSort con metodo del partizionamento 
+confrontare quickSort e MergeSort in termini di efficienza e stabilità in quali scenari preferite l'uno e l'altro
+analizzare la complessità dell'heap sort nei casi peggiori medio e semplice
+
+----------------------ESA2
+1. Descrivete il funzionamento dell'algoritmo Selection Sort, codificarlo in pseudocodice, fasi dell’algoritmo ed analisi delle prestazioni.
+
+2. Confrontate Insertion Sort con il Bubble Sort in termini di efficienza, uso della memoria e stabilità. In quali scenari preferireste usare Bubble Sort rispetto a Insertion Sort e viceversa?
+
+3. Analizzate la complessità temporale del Linear Search nei casi migliore, medio e peggiore. Spiegate le condizioni che portano a ciascuno di questi casi.
+4. Progettate un sistema per gestire le prenotazioni in un ospedale. Il sistema deve supportare le seguenti operazioni:
+
+1. Aggiunta di nuovi appuntamenti al calendario;
+2. Ricerca di appuntamenti per paziente, medico o data;
+3. Prenotazione di visite per i pazienti;
+4. Cancellazione o modifica delle prenotazioni.
+
+a) Descrivete le strutture dati che utilizzereste per implementare questo sistema, giustificando le vostre scelte.
+
+b) Discutete i vantaggi e gli svantaggi delle strutture dati scelte, considerando l'efficienza delle operazioni richieste.
+
+5 domande a risposta multipla:
+Simili alle domande messe a disposizione nel corso
+
+----------------------ESA3
+aperta: differenza tra insertion sort e heap sort nella complessità temporale con particolare riferimento a fase heapify ed estrazione
+aperta: programmazione dinamica
+aperta: [0,1,2,0,0,1,2] creare un algoritmo con complessità n non conosciuto(inventato) e scrivere o in pseudocodice o in codice a scelta
+aperta: inserire in un array ordinato un elemento e analizzare se conviene implementarlo con ricerca binaria o con insertion
+(in poche parole gli ho scritto che o ricerco la posizione e poi lo inserisco in pos arbitraria oppure inserisco alla fine dell’array e poi riordino).
+
+Quelle chiuse praticamente simili a quelle delle esercitazioni
+
+----------------------ESA4
+1. Insertion Sort e Quick Sort rappresentano due approcci molto diversi all'ordinamento. Analizza in dettaglio questi due algoritmi:
+- Confronta le strategie algoritmiche: spiega il funzionamento di entrambi gli algoritmi evidenziando le differenze fondamentali nell'approccio, analizza come
+ciascun algoritmo gestisce array già parzialmente ordinati, discuti il concetto di stabilità per entrambi gli algoritmi
+-analisi delle complessità: confronta le complessità temporali (caso migliore medio e peggiore) di entrambi gli algoritmi, analizza lo spazio aggiuntivo richiesto
+
+2. Si descriva l'algoritmo di bellman-ford,spiegandone il funzionamento,analizzandone le complessità computazionali e illustrando quando e perché è preferibile a Dijkstra
+
+3. Si confroni le strutture dati alberi AVL e alberi Rosso-Neri in termini di: criteri di bilanciamento, complessità delle operazioni di inserimento e cancellazione, overhead di memoria
+
+4. Progettare e implementare un sistema che gestisca le prenotazioni per una clinica medica con i seguenti requisiti:
+a. la clinica ha m dottori specializzati in diverse aeree
+b. Ogni dottore ha la propria agenda giornaliera con slot di 30 minuti
+c. I pazienti posso avere priorità diverse (1- urgente 2-normale 3-controllo)
+d. le prenotazioni urgenti devono essere gestite il prima possibile
+
+Si documenti la complessità computazionale per ongi funzionalità, si giustifichi la scleta delle strutture dati e inoltre il sistema deve gestire appropriatamente i casi limite
+
+Per le domande a risposta multipla riguardavano gli argomenti: 
+Heap Sort, Merge Sort, Union-Find e Albero AVL
+
+----------------------ESA5 18/03/2025 in presenza a Roma:
+1. Insertion Sort e Merge sort confronta le complessità computazionali nel caso migliore, medio e peggiore:
+a. Discuti il comportamento del Merge Sort nella fase di divisione ricorsiva e nella fase di fusione.
+b. Discuti il funzionamento dell’ algoritmo Insertion Sort spiega, inoltre, perché può risultare preferibile rispetto ad altri algoritmi teoricamente più efficienti in determinati contesti applicativi. 
+2. Gli algoritmi greedy forniscono sempre soluzioni ottimali? Discuti con almeno un esempio concreto analizzando i casi in cui l’approccio greedy è efficace e quelli in cui non garantisce l’ottimalità.
+
+3. In che modo i principi di sovrapposizione, entanglement e interferenza quantistica contribuiscono al vantaggio computazionale degli algoritmi quantistici rispetto agli algoritmi classici?
+
+4. Un’università desidera sviluppare un sistema informatico per la gestione di una biblioteca digitale. Oltre a consentire agli utenti di cercare libri e prendere in prestito quelli disponibili, si utilizzi una struttura dati efficiente per memorizzare i libri della biblioteca, con informazioni come titolo, autore, anno di pubblicazione e genere. Si scelga una struttura dati per gestire gli utenti e la cronologia dei libri presi in prestito. Si implementi un algoritmo di ricerca efficiente per permettere agli utenti di trovare libri rapidamente.
+
+Le domande a risposta chiusa erano riguardo:
+1. Approccio K-means 
+2. Merge sort
+3. Algoritmi quantistici
+4. Alberi BST
+5. non la ricordo purtroppo
+

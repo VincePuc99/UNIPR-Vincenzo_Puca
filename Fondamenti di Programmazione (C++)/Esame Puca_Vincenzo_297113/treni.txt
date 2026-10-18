@@ -1,0 +1,29 @@
+2/Afrosiyob/Talgo/250.5 
+3/Alfa Pendular/Pendolino/236.6   
+4/Alvia class 130/Talgo/280.0  
+6/Avant class 114/Nuovo Pendolino/250.2 
+10/AVE Class 105/Oaris/350.8  
+11/BR Class 370/APT/249.9 
+14/BR Class 395/A-Train/225.3 
+17/CRH3 C/Siemens Velaro/350.7
+18/CRH5/Nuovo Pendolino/250.6  
+19/CRH380/Shinkansen/380.0     
+33/Shinkansen 200/Shinkansen/275.4
+34/Shinkansen 300/Shinkansen/270.9 
+39/THSR 700T/Shinkansen/300.7 
+40/X2/X2000/200.9
+41/X3/Coradia/205.8  
+42/X40/Coradia/200.5  
+43/X50/Regina/200.4
+30/KTX-I/TGV/330.3
+12/BR Class 373/TGV/300.2 
+0/Acela Express/TGV/266.0 
+7/AVE Class 100/TGV/300.5
+5/Avant class 104/Pendolino/270.4 
+13/BR Class 390/Pendolino/225.4
+20/ETR 401/Pendolino/250.5  
+21/ETR 450/Pendolino/280.8
+35/Sm3/Pendolino/220.5
+36/Sm6/Pendolino/220.7 
+37/TGV Atlantique/TGV/300.3 
+38/TGV Duplex/TGV/320.1     

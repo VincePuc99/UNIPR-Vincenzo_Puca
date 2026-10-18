@@ -1,0 +1,177 @@
+;Istruzione CLD Direction flag normale 
+;Istruzione STD	Direction flag al contrario 
+
+CPU 8086
+
+SECTION data
+
+SECTION text
+..start:
+
+	mov ax,data
+	mov ds,ax
+	mov es,ax
+
+	call main
+
+	mov ax,4c00h
+	int 21h
+
+main:
+	push bp
+	mov bp,sp
+
+
+
+	call Func
+	add sp,
+
+
+	mov ax, Stampami 
+  	push ax
+	 
+  	call ScriviStringa 
+  	add sp, 2 ; 1 Push -> 1x2=2
+
+Fine:	pop bp
+	ret
+
+Func:	push bp
+	mov bp,sp
+
+
+
+
+	pop bp
+	ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Sbatti nello stack cosa vuoi stampare prima obv
+
+ScriviStringa: 
+	push bp 
+	mov bp, sp 
+	mov si,[bp+4] 
+
+	mov  ah,0eh 
+	mov  bx,0000h 
+Stampa:   
+	lodsb 		;Aggiungi ad al 30h se è un numeretto
+	cmp al, 0 
+	je fineStampa 
+
+	int  10h 
+
+	jmp Stampa 
+fineStampa: 
+	pop bp 
+	ret    
+-----------------------------------------------------------------------------
+
+SECTION text
+..start:
+	mov al,234
+	mov dl,100
+	div dl
+
+	cmp al,0
+	je Decine
+
+	push ax
+			mov ah,0eh
+			add al,30h
+			int 10h
+	pop ax
+
+Decine:
+	xchg ah,al 	;34 in al
+	xor ah,ah
+
+	mov dl,10
+	div dl
+
+	cmp al,0
+	je unita
+
+	push ax
+			mov ah,0eh
+			add al,30h
+			int 10h
+	pop ax
+unita:
+	xchg ah,al 
+	xor ah,ah
+			mov ah,0eh
+			add al,30h
+			int 10h
+
+			mov ax,4c00h
+			int 21h
+------------------------------------------
+
+	cmp al,'A'
+	jb Minus
+	
+	cmp al,'Z'
+	ja Minus
+------------------------
+	cmp al,'a'
+	jb Maiusc
+
+	cmp al,'b'
+	ja Maiusc
+
+-----------------------------------------
+mov al,'a'	Da minusc a Maiusc
+add al,20h
+-----------------------------------------
+mov al,'A'	Da Maiusc a minusc
+sub al,20h
+----------------------------------------
+
+	mov al,3
+	test al,1b
+	je Pari
+
+	mov ax,4c00h
+	int 21h
+
+Pari:
+	mov ah,0eh
+	add al,30h
+	int 10h
+
+	mov ax,4c00h
+	int 21h
+------------------------------------------
+
+SECTION text
+..start:
+				;mov al,-3
+				
+				;cmp al,0
+				;jl negativo
+			;negativo:
+				;neg al
+	
+	mov al,'A'
+	add al,20h
+	
+
+
+
+				;add al,4
+
+	mov ah,0eh
+				;add al,30h
+	int 10h
+
+	mov ax,4c00h
+				
+	int 21h
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+mov al, 0dh	;A Capo
+Print 		;
+mov al, 0ah	;
+Print		;
+--------------------------------------------------

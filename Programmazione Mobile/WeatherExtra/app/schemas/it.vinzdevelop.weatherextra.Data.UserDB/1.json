@@ -1,0 +1,52 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a0ad5757321b839b5dd6373f9d571117",
+    "entities": [
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`UsrId` INTEGER NOT NULL, `Username` TEXT, `Password` TEXT, `LoggedToken` INTEGER NOT NULL, PRIMARY KEY(`UsrId`))",
+        "fields": [
+          {
+            "fieldPath": "UsrId",
+            "columnName": "UsrId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Username",
+            "columnName": "Username",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Password",
+            "columnName": "Password",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Token",
+            "columnName": "LoggedToken",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "UsrId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a0ad5757321b839b5dd6373f9d571117')"
+    ]
+  }
+}

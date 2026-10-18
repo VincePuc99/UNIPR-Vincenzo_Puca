@@ -1,0 +1,79 @@
+Classe SistemaClinicaMedica()
+Dottori in m Campi
+Dottore Agenda di 30 minuti
+pazienti prioritari con 1 2 3 urgente normale e controllo
+
+Classe DataBaseDottori()
+HashMap Dottori<CodiceDottore - OBJDottore>
+
+Classe Dottore()
+String Nome, Cognome
+List Agenda
+List Specializzazione
+
+Classe Appuntamento()
+String NomePaziente
+String CognomePaziente
+Int Durata
+Int Priorità
+
+
+------ Esempio di contenuto HashMap
+
+(ABCD, Mario, Rossi, [OBJAppuntamento1,OBJAppuntamento2], ["Ortopedia", "Cardiologia"])
+(EFGH, Luigi, Bianchi, [OBJAppuntamento1,OBJAppuntamento2], ["Pediatria", "Odontoiatra"])
+
+------
+
+Il sistema da me sviluppato prevede l'utilizzo di un sistema di memorizzazione hashmap per i dottori, nel particolare qualora si voglia cercare un dottore direttamente basterà includere nel campo di ricerca il proprio codice univoco, alla successiva invocazione sarà possibile ottenere ulteriori informazioni come Nome Cognome Agenda Personale e Campi di specializzazione.
+Per avere più correttezza di codice ho previsto l'associazione tramite HashMap di oggetti dottore ma è possibile semplificarne l'uso senza la classe stessa.
+
+Utilizzando un hashmap l'accesso la ricerca l'inserimento e la cancellazione sono tutti instantanei in O(1) ne sono un esempio le seguenti funzioni:
+
+Funzione InserimentoDottore(NuovoCodiceDottore,NuovoOBJDottore):
+	Database.Dottori[NuovoCodiceDottore][NuovoOBJDottore.Nome][NuovoOBJDottore.Cognome][NuovoOBJDottore.Agenda][NuovoOBJDottore.Specializzazione]
+	return True #Inserimento riuscito
+
+Con la stessa operazione è possibile eseguire accesso ricerca e inserimento
+
+------
+
+Durante la creazione dell Oggetto dottore dovrà essere specificata la lista delle specializzazioni e l'agenda degli appuntamenti, questo per permettere una maggiore flessibilità rispetto agli array in quanto sarebbero solo allocati staticamente e l'eventuale inserimento e/o cancellazione richiederebbe tempi operazionali più lunghi. Utilizzando le liste possiamo ottenere tempi di accesso e inserimento in O(1) e cancellazione e ricerca in O(n). Segue un esempio di lista agenda con aggiunta:
+
+List AgendaDottore1
+AgendaDottore1.append(OBJAppuntamento1)
+
+OBJAppuntamento sarà un oggetto caratterizzato dalla priorità della visita e dalle credenziali dei pazienti, (ulteriormente identificabili con codice fiscale)
+Se la durata dell'oggetto OBJAppuntamento supera i 30 minuti non sarà accettata come da richiesta. Per verificarne la durata può effettuare l'accesso al campo dell'oggetto stesso (istantaneo) con OBJAppuntamento1.Durata utilizzando apposite if di controllo durante l'inizializzazione del sistema.
+Per creare un oggetto appuntamento dovrà essere necessario appuntare anche l'urgenza della visita stessa, per farlo ho utilizzato il campo Int Priorità, essendo da ricercare all'interno prima della hashmap e poi della lista agenda del dottore bisognerà avere un algoritmo di ricerca. Eccone un esempio:
+
+Funzione ProssimoAppuntamentoDottore(CodiceDottore)
+
+	for Appuntamento in Database.Dottori[CodiceDottore][Agenda]	#Accesso alla hashmap O(1) ricerca lineare in lista O(n) del dottore
+		if Appuntamento.Priorità == 1
+			Esegui Visita urgenza 1
+			Rimuovi Visita urgenza 1
+
+	for Appuntamento in Database.Dottori[CodiceDottore][Agenda]
+		if Appuntamento.Priorità == 2
+			Esegui Visita urgenza 2
+			Rimuovi Visita urgenza 2
+
+	for Appuntamento in Database.Dottori[CodiceDottore][Agenda]
+		if Appuntamento.Priorità == 3
+			Esegui Visita urgenza 3
+			Rimuovi Visita urgenza 3
+
+Sarà possibile poi eseguire i rimanenti appuntamenti con urgenze minori mediante la medesima funzione, la funzione specificata non avrà prestazioni eccellenti ma dovendo controllare la lista agenda per ogni appuntamento è necessario avere la ricerca su lista O(n) che nel migliore dei casi potrebbe essere O(1)
+
+(Si potrebbe usare la binary search)
+
+
+
+
+	
+
+
+
+
+

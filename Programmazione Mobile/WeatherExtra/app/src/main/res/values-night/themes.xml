@@ -1,0 +1,56 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WeatherExtra" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_light</item>
+        <item name="colorPrimaryVariant">@color/blue_high</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/blue_mid</item>
+
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+
+        <item name="android:textColor">@color/material_grey</item>
+
+        <item name="android:windowSplashScreenBackground">@color/blue_mid</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_screen_news_avd_preview</item>
+
+    </style>
+
+    <style name="ButtonExtra">
+        <item name="android:textColor">@color/white</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="backgroundTint">@color/blue_mid</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="TextInputLayoutStyleNight" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/blue_mid</item>
+        <item name="hintTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/white</item>
+    </style>
+
+</resources>

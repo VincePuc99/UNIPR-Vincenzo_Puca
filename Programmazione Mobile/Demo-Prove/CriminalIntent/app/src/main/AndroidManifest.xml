@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-sdk android:minSdkVersion="33" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false"
+        />
+
+    <queries>
+        <!-- Specific apps you interact with,Android 11+ eg: -->
+        <package android:name="org.lineageos.aperture" />
+        <package android:name="com.android.contacts"/>
+        <!--
+             Specific intents you query for,
+             eg: for a custom share UI
+        -->
+        <intent>
+            <action android:name="android.intent.ACTION_IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.ACTION_PICK"/>
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CriminalIntent">
+        <activity android:name=".CrimeListActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.bignerdranch.android.criminalintent.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/files"/>
+
+        </provider>
+        <activity android:name=".CrimePagerActivity"
+            android:parentActivityName=".CrimeListActivity">
+            ></activity>
+    </application>
+
+</manifest>

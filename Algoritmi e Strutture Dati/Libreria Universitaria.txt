@@ -1,0 +1,91 @@
+Classe SistemaInformatico()
+
+Funzione AlgoritmoricercaLibro()
+Funzione PrendiinPrestito(LibroRicercato)
+
+StrutturaDati Titolo,Autore,anno,Genere
+StrutturaDati Utenti,LibriPresiInPrestito
+
+-------------------
+Classe Utente()
+String idUtente
+List LibriInPrestito
+
+Inizierei con la creazione di una classe utente da progettare come sottoinsieme del programma principale,
+ogni utente sarebbe identificato tramite un id univoco (eventualmente tramite supporto di database), ad ogni utente verrebbe associata
+una lista di libri in presito, le liste sarebbero molto utili nel concetto richiesto in quanto dinamiche e non fisse come gli array, sarebbe infatti possibile
+aggiungere con O(1) qualsiasi libro previa verifica della disponibilità con algoritmo di ricerca prescelto del sistema informatico.
+Sempre parlando di liste la cancellazione di un eventuale libro restituito consisterebbe in O(n) e l'accesso in O(1) quindi praticamente istantaneo, si perderebbe solo 
+performance nel caso peggiore di ricerca O(n)
+
+-------------------
+Classe LibriMagazzino()
+Array[] LibriInPrestito di oggetti Libro()		HashMap<ISBN,Titolo,Autore,Anno,Genere,Disponibile>
+
+Classe Libro()
+String ISBN
+String Titolo
+String Autore
+Int Anno
+String Genere
+bool Disponibile
+
+La classe proposta servirebbe alla gestione magazzino con eventuali connettori al databse.
+Il sistema proposto prevede la creazione di un array di oggetti, ad esempio tramite l'accesso di array[0].titolo sarebbe possibile accedere direttamente al libro
+scelto, o per essere più precisi sarebbe utile avere un campo nell'oggetto Libro come ISBN in modo da avere univocamente ogni libro (array[0].isbn)
+L'accesso ai libri sarebbe istantaneo O(1), mentre la ricerca inserimento e cancellazione prevedono una complessità O(n), trascurabile se parliamo di sistemi di magazzino che raramente 
+prevedono l'aggiunta di nuovi libri o la rimozione completa degli stessi
+Ogni libro prevede la variabile booleana Disponibile, utile per sapere se è attualmente in prestito o se è disponibile in magazzino
+
+------
+
+Alternativamente si postrebbe creare una hashmap in modo da avere la ricerca inserimento cancellazione e accesso a O(1) in questo caso si potrebbe accedere ad un libro ricercato con:
+HashMap[ISBNRicercato] e da qui avere tutte le informazioni possibili con (HashMap[ISBNRicercato]["Titolo"]) dove viene preso direttamente il titolo con la chiave scelta
+
+
+-------------------
+Funzione AlgoritmoricercaLibro()
+
+La funzione di ricerca che implementerei è la ricerca binaria, questa mi permetterebbe di avere una complessità massima di O(logn) minimo di O(1) media di O(log1) e spaziale di O(1)
+in quanto non userebbe spazio aggiuntivo, sarebbe nettamente migliore di una ricerca lineare che nel caso medio e massimo avrebbe una complessità di O(n), mentre minima O(1) nel caso in 
+cui il dato sia il primo della lista e spazioale di O(1)
+
+Dopo aver trovato il valore desiderato, verrebbe restituito il segnale di True che se vero andrebbe ad essere messo in False nel magazzino (Classe LibriMagazzino()) in modo da indicare che il libro è stato preso in prestito e aggiunto l'isbn o anche l'oggetto completo alla liste dei libri presi in prestito del singolo utente che ha richiesto quel determinato libro, un esempio della funzione sarebbe la seguente:
+
+Funzione AlgoritmoricercaLibro(LibriMagazzino.LibriInPrestito,LibroCercato):	#RicercaLineare al posto della binaria errore mio
+for i in range(len(LibriMagazzino.LibriInPrestito)):
+	if LibriMagazzino.LibriInPrestito.ISBN == LibroCercato.ISBN
+		if LibriMagazzino.LibriInPrestito.Disponibile
+			LibriMagazzino.LibriInPrestito.Disponibile = False
+			Funzione PrendiinPrestito(LibroRicercato)
+			return True #Libro trovato e aggiunto all'utente
+
+return False #Libro non trovato
+
+
+------
+
+Con le hashmap la funzione sarebbe stata superflua in quanto 
+Funzione AlgoritmoricercaLibro(ISBNRicercato)
+	if HashMap[ISBNRicercato]["Disponibile"]
+		HashMap[ISBNRicercato]["Disponibile"] = False
+		Funzione PrendiinPrestito(ISBNRicercato)
+
+Si accedeva direttamente al libro scelto e in caso di True veniva chiamata PrendiinPrestito
+Con false risultava in errore non avendo il libro disponible eliminando completamente la ricerca binaria/lineare
+
+
+------
+
+PrendiinPrestito(LibroRicercato):
+UtenteCorrente.LibriInPrestito.append(LibroRicercato) 
+return True #operazione correttamente eseguita
+
+
+
+
+
+
+
+
+
